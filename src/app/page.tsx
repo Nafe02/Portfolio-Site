@@ -11,7 +11,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="mx-auto max-w-content px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-24 lg:px-12 lg:pt-28">
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-8">
+          <div className="order-2 lg:order-1 lg:col-span-8">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted">
               Product Leader · Builder · Strategist
             </p>
@@ -39,8 +39,21 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="lg:col-span-4 lg:pt-4">
-            <div className="border border-border p-6 md:p-8">
+          <div className="order-1  w-full  lg:order-2 lg:col-span-4 lg:col-start-9 lg:pt-4">
+            <div className="overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/my-image.png"
+                alt="Nafiu Gwandu, product leader"
+                width={800}
+                height={1000}
+                className="aspect-[4/5] w-full object-cover object-[center_20%]"
+              />
+            </div>
+          </div>
+          
+          <div className="order-3 lg:col-span-4 lg:col-start-9">
+            <div className="border border-border p-6 md:p-8 lg:mt-8">
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Newsletter
               </p>
@@ -48,8 +61,8 @@ export default function HomePage() {
                 Join the list
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Occasional notes on product, leadership, and building — no spam,
-                no provider hooked up yet.
+                Occasional notes on product, leadership, and building — no
+                spam.
               </p>
               <NewsletterForm className="mt-6" />
             </div>
