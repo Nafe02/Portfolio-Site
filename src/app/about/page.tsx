@@ -12,22 +12,46 @@ export const metadata: Metadata = {
 
 const experience = [
   {
-    period: "2022 — Present",
-    role: "VP Product",
-    company: "Placeholder Co.",
-    detail: "Leading product strategy and cross-functional execution at scale.",
+    period: "2025 — Present",
+    role: "Project Manager",
+    company: "Albatross.",
+    detail: "Leading remote product teams to deliver a scalable logistics coordination platform for small and mid-size enterprises, improving delivery accuracy by 35%. Established sprint-based delivery cycles, reducing task turnaround time by 25%. Designed a progress-tracking dashboard in Jira to enhance visibility and accountability across distributed teams. Collaborated with UX/UI designers and developers to refine user journeys, increasing overall system usability by 20%.",
   },
   {
-    period: "2019 — 2022",
-    role: "Head of Product",
-    company: "Placeholder Startup",
-    detail: "0→1 launches, growth systems, and team building from 4 to 20.",
+    period: "2024 — 2025",
+    role: "Project Manager",
+    company: "NextCBA.",
+    detail: "Oversaw multiple fintech product development cycles, achieving a 40% faster release cadence through Agile implementation. Directed cross-functional collaboration between engineering, QA, and operations teams to ensure product scalability and compliance. Led backlog prioritization and sprint planning, improving feature delivery predictability by 30%. Conducted product performance reviews and stakeholder reporting, driving data-based strategic decisions.",
+  },
+  {
+    period: "2024 — 2025",
+    role: "Project Manager",
+    company: "MufasaX.",
+    detail: "I plan and develop the project scope, Create and lead a team, monitor project progress and set deadlines. I overcome obstacles, manage the project budget, ensure stakeholder satisfaction, and evaluate project performance.",
+  },
+  {
+    period: "2024 — 2025",
+    role: "Project Manager",
+    company: "Microbiz Microfinance Bank Ltd.",
+    detail: "I am focused on the technical aspects of product development, work closely with engineering teams to translate product requirements into technical specifications, manage technical roadmaps, and ensure that the technical aspects of the product align with the overall vision.",
+  },
+  {
+    period: "2024 — 2025",
+    role: "Product Manager",
+    company: "ilim Tutor.",
+    detail: "I help with the strategy, roadmap, and feature definition of a product or product line. I am working closely with cross-functional teams, including engineering, design, marketing, and sales, to deliver products that align with the company’s vision and meet customer needs. I'm also Focused on the underlying platforms that support multiple products or services, ensure scalability and reliability, manage APIs and integration points, and work with developers to enable new capabilities.",
+  },
+  {
+    period: "2023 — 2024",
+    role: "Associate Product Manager",
+    company: "FlexiSAF Edusoft Limited",
+    detail: "I help and inspire a talented software product team to create exceptional digital solutions.",
   },
   {
     period: "2022 — 2022",
     role: "Mentor",
     company: "HostBeak.",
-    detail: "I mentor and teach mentees how to install WordPress websites, upload themes, and design the websites. I also have classes and mentorship sessions with them..",
+    detail: "I mentor and teach mentees how to install WordPress websites, upload themes, and design the websites. I also have classes and mentorship sessions with them.",
   },
 ];
 
@@ -51,8 +75,7 @@ export default function AboutPage() {
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
           I&apos;m Nafiu Gwandu — a product leader who believes clarity is a
-          competitive advantage. This page is placeholder content crafted to
-          feel human, reflective, and trustworthy — not a résumé dump.
+          competitive advantage. I'mpassionate about bringing ideas to life. Proficient in project and management, cross-team communication, and best-in-class customer service. Enjoys finding creative solutions in customer service, marketing, and web development initiatives.
         </p>
       </section>
 
@@ -75,7 +98,7 @@ export default function AboutPage() {
                 alike.
               </p>
               <p>
-                Placeholder paragraph: the through-line in my work has been
+               The through-line in my work has been
                 helping organizations move faster without losing their soul —
                 shipping with discipline, learning in public, and treating design
                 and engineering as partners, not vendors.
