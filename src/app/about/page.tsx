@@ -24,10 +24,10 @@ const experience = [
     detail: "0→1 launches, growth systems, and team building from 4 to 20.",
   },
   {
-    period: "2016 — 2019",
-    role: "Senior Product Manager",
-    company: "Placeholder Inc.",
-    detail: "Shipped core platform features used by enterprise customers.",
+    period: "2022 — 2022",
+    role: "Mentor",
+    company: "HostBeak.",
+    detail: "I mentor and teach mentees how to install WordPress websites, upload themes, and design the websites. I also have classes and mentorship sessions with them..",
   },
 ];
 
