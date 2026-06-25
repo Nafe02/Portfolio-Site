@@ -118,7 +118,7 @@ export default function HomePage() {
                 reflective introduction.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-muted md:text-xl">
-                On the About page you&apos;ll find my story, philosophy, and how
+                On the About page you,ll find my story, philosophy, and how
                 I approach building products and leading people.
               </p>
               <Link

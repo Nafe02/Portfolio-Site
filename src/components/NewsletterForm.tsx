@@ -64,10 +64,10 @@ export function NewsletterForm({
         aria-live="polite"
       >
         <p className="font-display text-xl font-bold uppercase tracking-wide text-ink">
-          You&apos;re on the list.
+          You,re on the list.
         </p>
         <p className="mt-2 text-sm text-muted">
-          Thanks for subscribing. You&apos;ll hear from me soon.
+          Thanks for subscribing. You,ll hear from me soon.
         </p>
       </div>
     );
