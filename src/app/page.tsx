@@ -80,7 +80,7 @@ export default function HomePage() {
             eyebrow="Selected work"
             title="Featured projects"
             titleId="featured-heading"
-            description="A snapshot of recent impact across product, growth, and leadership. Placeholder metrics and summaries."
+            description="A snapshot of recent impact across product, growth, and leadership."
           />
           <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8 lg:gap-12">
             {featuredProjects.map((project) => (

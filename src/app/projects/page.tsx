@@ -22,8 +22,6 @@ export default function ProjectsPage() {
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
           A curated set of initiatives across product, growth, and leadership.
-          Placeholder content — clean cards, easy to scan, no giant case studies
-          yet.
         </p>
       </section>
 

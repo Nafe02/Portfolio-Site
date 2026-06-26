@@ -214,7 +214,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Experience"
             title="Where I've worked"
-            description="Placeholder roles and companies. Replace with real experience when ready."
+            description="The roles and companies that I have worked for."
           />
           <ul className="mt-12 space-y-0">
             {experience.map((item) => (
