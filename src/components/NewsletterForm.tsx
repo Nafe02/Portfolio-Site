@@ -1,5 +1,5 @@
 "use client";
-
+import { supabase } from "@/lib/supabase";
 import { FormEvent, useState } from "react";
 
 type NewsletterFormProps = {
@@ -7,8 +7,6 @@ type NewsletterFormProps = {
   className?: string;
 };
 
-const API_URL =
-  process.env.NEXT_PUBLIC_NEWSLETTER_API_URL ?? "/api/subscribe";
 
 export function NewsletterForm({
   variant = "default",
@@ -21,34 +19,41 @@ export function NewsletterForm({
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+  
     if (!email.trim() || loading) return;
-
+  
     setLoading(true);
     setError("");
-
+  
     const form = event.currentTarget;
+  
     const website = (
       form.elements.namedItem("website") as HTMLInputElement | null
     )?.value;
-
+  
     try {
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, website }),
-      });
-
-      const data = (await response.json()) as {
-        ok?: boolean;
-        error?: string;
-      };
-
-      if (!response.ok || !data.ok) {
-        setError(data.error ?? "Something went wrong. Please try again.");
+      // Spam protection
+      if (website) {
+        setSubmitted(true);
         return;
       }
-
+  
+      const { error } = await supabase
+        .from("subscribers")
+        .insert([{ email }]);
+  
+      if (error?.code === "23505") {
+        setError("You&apos;re already subscribed.");
+        return;
+      }
+  
+      if (error) {
+        setError(error.message);
+        return;
+      }
+  
       setSubmitted(true);
+      setEmail("");
     } catch {
       setError("Unable to subscribe right now. Please try again.");
     } finally {
@@ -64,10 +69,10 @@ export function NewsletterForm({
         aria-live="polite"
       >
         <p className="font-display text-xl font-bold uppercase tracking-wide text-ink">
-          You,re on the list.
+          You&apos;re on the list.
         </p>
         <p className="mt-2 text-sm text-muted">
-          Thanks for subscribing. You,ll hear from me soon.
+          Thanks for subscribing. You&apos;ll hear from me soon.
         </p>
       </div>
     );
