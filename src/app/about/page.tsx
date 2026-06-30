@@ -75,7 +75,7 @@ export default function AboutPage() {
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
           I&apos;m Nafiu Gwandu — a product leader who believes clarity is a
-          competitive advantage. I,m passionate about bringing ideas to life. Proficient in project and management, cross-team communication, and best-in-class customer service. Enjoys finding creative solutions in customer service, marketing, and web development initiatives.
+          competitive advantage. I&apos;m passionate about bringing ideas to life. Proficient in project and management, cross-team communication, and best-in-class customer service. Enjoys finding creative solutions in customer service, marketing, and web development initiatives.
         </p>
       </section>
 

@@ -19,9 +19,7 @@ export default function HomePage() {
               I build products and teams that ship with clarity.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
-              Nafiu Gwandu helps startups and scaling companies turn ambiguity
-              into momentum — from zero-to-one launches to org design at scale.
-              Placeholder copy for positioning and expertise.
+            “I help startups and scaling companies turn ambiguity into momentum — from zero-to-one launches to operational systems that enable teams to move faster with clarity.”
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-6">
               <Link

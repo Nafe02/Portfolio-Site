@@ -1,8 +1,0 @@
-name = "nafiu-portfolio"
-compatibility_date = "2025-05-28"
-pages_build_output_dir = "out"
-
-[[kv_namespaces]]
-binding = "NEWSLETTER_SUBSCRIBERS"
-id = "054cf8a5d2fe4a18b8759cab30170496"
-preview_id = "d8f892e4b626411aa9f7a9c6101765af"
