@@ -92,5 +92,5 @@ export const navLinks = [
 export const socialLinks = [
   { href: "https://www.linkedin.com/in/nafiu-gwandu/", label: "LinkedIn" },
   { href: "https://mycasestudy.notion.site/Leadership-and-Strategic-Pivots-in-EdTech-Development-1453b0e5210980dc86ccf09ee74347c7", label: "Notion" },
-  { href: "https://github.com//Nafe02", label: "GitHub" },
+  { href: "https://github.com/Nafe02", label: "GitHub" },
 ] as const;

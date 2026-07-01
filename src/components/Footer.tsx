@@ -1,3 +1,8 @@
+import {
+  SiLinkedin,
+  SiGithub,
+  SiNotion,
+} from "react-icons/si";
 import Link from "next/link";
 import { socialLinks } from "@/lib/data";
 import { NewsletterForm } from "./NewsletterForm";
@@ -17,21 +22,30 @@ export function Footer() {
               Product leader building systems, teams, and products with clarity
               and intent.
             </p>
-            <ul className="mt-8 flex flex-wrap gap-6">
-              {socialLinks.map(({ href, label }) => (
-                <li key={label}>
-                  <a
-  href={href}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-sm font-medium uppercase tracking-wide hover:text-accent transition-colors"
->
-  {label}
-</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <ul className="mt-8 flex items-center gap-5">
+  {socialLinks.map(({ href, label }) => {
+    const Icon =
+      label === "LinkedIn"
+        ? Linkedin
+        : label === "GitHub"
+        ? Github
+        : FileText;
+
+    return (
+      <li key={label}>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label}
+          className="text-muted transition-colors hover:text-accent"
+        >
+          <Icon size={22} strokeWidth={1.75} />
+        </a>
+      </li>
+    );
+  })}
+</ul>
 
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
