@@ -1,8 +1,8 @@
 import {
-  SiLinkedin,
-  SiGithub,
-  SiNotion,
-} from "react-icons/si";
+  Linkedin,
+  Github,
+  FileText,
+} from "lucide-react";
 import Link from "next/link";
 import { socialLinks } from "@/lib/data";
 import { NewsletterForm } from "./NewsletterForm";
@@ -25,11 +25,11 @@ export function Footer() {
             <ul className="mt-8 flex items-center gap-5">
   {socialLinks.map(({ href, label }) => {
     const Icon =
-      label === "LinkedIn"
-        ? SiLinkedin
-        : label === "GitHub"
-        ? SiGithub
-        : SiNotion;
+    label === "LinkedIn"
+      ? Linkedin
+      : label === "GitHub"
+      ? Github
+      : FileText;
 
     return (
       <li key={label}>
