@@ -26,10 +26,10 @@ export function Footer() {
   {socialLinks.map(({ href, label }) => {
     const Icon =
       label === "LinkedIn"
-        ? Linkedin
+        ? SiLinkedin
         : label === "GitHub"
-        ? Github
-        : FileText;
+        ? SiGithub
+        : SiNotion;
 
     return (
       <li key={label}>
@@ -40,12 +40,13 @@ export function Footer() {
           aria-label={label}
           className="text-muted transition-colors hover:text-accent"
         >
-          <Icon size={22} strokeWidth={1.75} />
+          <Icon size={22} />
         </a>
       </li>
     );
   })}
 </ul>
+</div>
 
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
