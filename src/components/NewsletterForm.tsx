@@ -43,7 +43,7 @@ export function NewsletterForm({
         .insert([{ email }]);
   
       if (error?.code === "23505") {
-        setError("You&apos;re already subscribed.");
+        setError("You're already subscribed.");
         return;
       }
   

@@ -21,11 +21,13 @@ export function Footer() {
               {socialLinks.map(({ href, label }) => (
                 <li key={label}>
                   <a
-                    href={href}
-                    className="text-sm font-medium uppercase tracking-wider text-ink transition-colors hover:text-accent"
-                  >
-                    {label}
-                  </a>
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm font-medium uppercase tracking-wide hover:text-accent transition-colors"
+>
+  {label}
+</a>
                 </li>
               ))}
             </ul>
