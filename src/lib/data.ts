@@ -1,28 +1,168 @@
 export type Project = {
   slug: string;
   title: string;
+
+  company?: string;
+  role?: string;
+  duration?: string;
+
   summary: string;
-  challenge: string;
-  solution: string;
-  impact: string;
+  overview?: string;
+
   category: string;
   metric?: string;
   featured?: boolean;
+
+  challenge: string;
+  solution: string;
+  impact: string;
+
+  teamSize?: string;
+
+  tools?: string[];
+
+  crisis?: string;
+  pivot?: string;
+
+  lessons?: string[];
+
+  responsibilities?: string[];
+  initiatives?: string[];
+
+  metrics?: {
+    label: string;
+    value: string;
+  }[];
+
+  sprintFramework?: {
+    day: string;
+    title: string;
+    activities: string[];
+  }[];
 };
 
 export const featuredProjects: Project[] = [
   {
-    slug: "platform-redesign",
-    title: "Platform Redesign",
-    summary:
-      "Led a zero-to-one product overhaul for a B2B workflow platform serving 40k+ monthly users.",
-    category: "Product Strategy",
-    metric: "32% increase in activation",
+    slug: "ilim-tutor",
+
+    title: "Leadership and Strategic Pivots in EdTech Development",
+
+    company: "Ilim Tutor",
+
+    role: "Product Manager",
+
+    duration: "Mar 2024 – Mar 2025",
+
+    category: "EdTech",
+
+    metric: "+87% Delivery Velocity",
+
     featured: true,
-    challenge: "Legacy UX was blocking enterprise adoption.",
-    solution: "Rebuilt core flows with a cross-functional squad in 12 weeks.",
-    impact: "Activation up 32%, NPS +18 points.",
+
+    summary:
+      "Led delivery of an AI-powered STEM platform by introducing structured sprint management, improving execution, reducing burnout, and accelerating feature delivery.",
+
+    overview:
+      "Ilim Tutor is an AI-powered STEM learning platform that personalizes education for K–12 students. I worked as Product Manager leading cross-functional delivery, improving operational execution, and strengthening product development processes.",
+
+    challenge:
+      "Four months into development, delivery velocity had slowed significantly. System integrations remained incomplete, burnout was increasing, and sprint commitments were becoming difficult to achieve.",
+
+    crisis:
+      "Three consecutive sprint cycles experienced declining productivity. Engineers were overwhelmed, priorities shifted frequently, and stakeholders had reduced confidence in delivery timelines.",
+
+    pivot:
+      "I redesigned the team's delivery process by introducing structured sprint planning, Friday retrospectives, Monday kickoffs, daily standups, clearer ownership, and measurable sprint goals.",
+
+    solution:
+      "The new operating rhythm improved communication, accelerated blocker resolution, and restored predictable delivery across engineering, design, and product.",
+
+    impact:
+      "The team completed all core platform initiatives while dramatically improving delivery speed and reducing burnout.",
+
+    teamSize: "12 Cross-functional Team Members",
+
+    tools: [
+      "Linear",
+      "Google Meet",
+      "Google Workspace",
+    ],
+
+    responsibilities: [
+      "Sprint Planning",
+      "Roadmap Prioritization",
+      "Cross-functional Leadership",
+      "Stakeholder Communication",
+      "Risk Management",
+      "Release Planning",
+    ],
+
+    initiatives: [
+      "Student Dashboard",
+      "AI Virtual Assistant",
+      "Game Integration Platform",
+    ],
+
+    metrics: [
+      {
+        label: "Delivery Velocity",
+        value: "+87%",
+      },
+      {
+        label: "Sprint Completion",
+        value: "95%",
+      },
+      {
+        label: "Bug Resolution",
+        value: "-66%",
+      },
+      {
+        label: "Burnout Reduction",
+        value: "15%",
+      },
+    ],
+
+    sprintFramework: [
+      {
+        day: "Friday",
+        title: "Sprint Planning & Retrospective",
+        activities: [
+          "Sprint retrospective",
+          "Task planning & prioritization",
+          "Sprint commitment",
+          "Architecture discussions",
+        ],
+      },
+      {
+        day: "Monday",
+        title: "Sprint Kickoff",
+        activities: [
+          "Sprint goal alignment",
+          "Resource allocation",
+          "Identify blockers",
+          "Confirm ownership",
+        ],
+      },
+      {
+        day: "Tuesday – Thursday",
+        title: "Daily Standups",
+        activities: [
+          "Yesterday's progress",
+          "Today's priorities",
+          "Resolve blockers",
+          "Cross-team synchronization",
+        ],
+      },
+    ],
+
+    lessons: [
+      "Structure creates speed.",
+      "Transparent communication prevents hidden blockers.",
+      "Consistent sprint rituals improve execution.",
+      "Healthy teams ship better products.",
+    ],
   },
+
   {
     slug: "growth-engine",
     title: "Growth Engine",
@@ -31,10 +171,14 @@ export const featuredProjects: Project[] = [
     category: "Growth",
     metric: "2.4× trial-to-paid conversion",
     featured: true,
-    challenge: "Paid acquisition was efficient but onboarding leaked users.",
-    solution: "Instrumented funnel, shipped progressive disclosure onboarding.",
-    impact: "Trial-to-paid improved 2.4× in one quarter.",
+    challenge:
+      "Paid acquisition was efficient but onboarding leaked users.",
+    solution:
+      "Instrumented funnel and shipped progressive disclosure onboarding.",
+    impact:
+      "Trial-to-paid improved 2.4× in one quarter.",
   },
+
   {
     slug: "team-scale",
     title: "Team at Scale",
@@ -43,11 +187,16 @@ export const featuredProjects: Project[] = [
     category: "Leadership",
     metric: "Ship cadence held at 2-week cycles",
     featured: true,
-    challenge: "Rapid hiring threatened quality and alignment.",
-    solution: "Introduced lightweight rituals, clear ownership, and outcome metrics.",
-    impact: "Maintained 2-week release cadence through 7× team growth.",
+    challenge:
+      "Rapid hiring threatened quality and alignment.",
+    solution:
+      "Introduced lightweight rituals, clear ownership, and outcome metrics.",
+    impact:
+      "Maintained 2-week release cadence through 7× team growth.",
   },
 ];
+  
+ 
 
 export const allProjects: Project[] = [
   ...featuredProjects,

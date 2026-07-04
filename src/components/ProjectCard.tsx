@@ -61,15 +61,15 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         <p className="mt-6 text-sm font-medium text-ink">{project.impact}</p>
       )}
 
-      <Link
-        href="/projects"
-        className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent"
-      >
-        View work
-        <span aria-hidden className="transition-transform group-hover:translate-x-1">
-          →
-        </span>
-      </Link>
+<Link
+  href={`/projects/${project.slug}`}
+  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent"
+>
+  View case study
+  <span aria-hidden className="transition-transform group-hover:translate-x-1">
+    →
+  </span>
+</Link>
     </article>
   );
 }

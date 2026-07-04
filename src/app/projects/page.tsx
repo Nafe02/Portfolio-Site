@@ -5,7 +5,7 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { allProjects } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Case Studies",
   description:
     "Selected projects by Nafiu Gwandu — product strategy, growth, leadership, and execution at scale.",
 };
@@ -15,13 +15,13 @@ export default function ProjectsPage() {
     <PageTransition>
       <section className="mx-auto max-w-content px-6 pb-12 pt-16 md:px-10 md:pb-16 md:pt-24 lg:px-12 lg:pt-28">
         <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted">
-          Work
+        Case Studies
         </p>
         <h1 className="mt-6 max-w-4xl font-display text-5xl font-bold uppercase leading-[0.92] tracking-tight text-ink md:text-6xl lg:text-7xl">
-          Projects that moved the needle.
+        Product decisions, delivery, and measurable outcomes.
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
-          A curated set of initiatives across product, growth, and leadership.
+        A collection of real product case studies highlighting strategy, execution, cross-functional leadership, and measurable business impact.
         </p>
       </section>
 

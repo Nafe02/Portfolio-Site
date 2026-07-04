@@ -219,7 +219,7 @@ export default function AboutPage() {
           <ul className="mt-12 space-y-0">
             {experience.map((item) => (
               <li
-                key={item.period}
+              key={`${item.company}-${item.period}`}
                 className="grid gap-4 border-t border-border py-8 md:grid-cols-12 md:gap-8"
               >
                 <p className="text-xs font-medium uppercase tracking-wider text-muted md:col-span-3">
@@ -275,7 +275,7 @@ export default function AboutPage() {
               href="/projects"
               className="inline-flex bg-accent px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-accent/90"
             >
-              View projects
+              View Case Studies
             </Link>
           </div>
           <div className="mt-16 border-t border-border pt-12">

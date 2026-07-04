@@ -26,7 +26,7 @@ export default function HomePage() {
                 href="/projects"
                 className="inline-flex bg-accent px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-accent/90"
               >
-                View projects
+                View Case Studies
               </Link>
               <Link
                 href="/about"
@@ -68,17 +68,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured projects */}
+      {/* Case Studies */}
       <section
         className="border-t border-border bg-white"
         aria-labelledby="featured-heading"
       >
         <div className="mx-auto max-w-content px-6 py-20 md:px-10 md:py-28 lg:px-12">
           <SectionHeading
-            eyebrow="Selected work"
-            title="Featured projects"
-            titleId="featured-heading"
-            description="A snapshot of recent impact across product, growth, and leadership."
+           eyebrow="Selected Case Studies"
+
+           title="Product case studies"
+           
+           description="Real product work across EdTech, education operations, and fintech."
           />
           <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8 lg:gap-12">
             {featuredProjects.map((project) => (
