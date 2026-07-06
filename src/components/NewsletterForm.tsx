@@ -1,5 +1,5 @@
 "use client";
-import { supabase } from "@/lib/supabase";
+
 import { FormEvent, useState } from "react";
 
 type NewsletterFormProps = {
@@ -37,21 +37,10 @@ export function NewsletterForm({
         setSubmitted(true);
         return;
       }
-  
-      const { error } = await supabase
-        .from("subscribers")
-        .insert([{ email }]);
-  
-      if (error?.code === "23505") {
-        setError("You're already subscribed.");
-        return;
-      }
-  
-      if (error) {
-        setError(error.message);
-        return;
-      }
-  
+    
+      // Placeholder until backend is connected
+      console.log("Newsletter signup:", email);
+    
       setSubmitted(true);
       setEmail("");
     } catch {

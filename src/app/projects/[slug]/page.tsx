@@ -188,7 +188,7 @@ export default async function ProjectPage({
 
       {/* Results */}
 
-      {project.outcomes && (
+      {project.metrics && (
 
         <section className="mt-24">
 
@@ -198,7 +198,7 @@ export default async function ProjectPage({
 
           <div className="mt-10 grid gap-6 grid-cols-2 md:grid-cols-4">
 
-            {project.outcomes.map((item) => (
+          {project.metrics.map((item) => (
 
               <div
                 key={item.label}
