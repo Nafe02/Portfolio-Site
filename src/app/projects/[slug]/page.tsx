@@ -172,6 +172,52 @@ export default async function ProjectPage({
         </section>
       )}
 
+      {/* Responsibilities */}
+
+{project.responsibilities && (
+  <section className="mt-24">
+    <h2 className="text-3xl font-bold">
+      My Responsibilities
+    </h2>
+
+    <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {project.responsibilities.map((item) => (
+        <div
+          key={item}
+          className="border border-border p-6"
+        >
+          <p className="font-medium">
+            {item}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+{/* Key Initiatives */}
+
+{project.initiatives && (
+  <section className="mt-24">
+    <h2 className="text-3xl font-bold">
+      Key Initiatives
+    </h2>
+
+    <div className="mt-10 grid gap-6 md:grid-cols-3">
+      {project.initiatives.map((item) => (
+        <div
+          key={item}
+          className="border border-border p-8"
+        >
+          <h3 className="font-semibold text-lg">
+            {item}
+          </h3>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
       {/* Solution */}
 
       <section className="mt-24">
@@ -221,7 +267,22 @@ export default async function ProjectPage({
 
         </section>
 
-      )}
+)}   
+
+      {/* Reflection */}
+      <section className="mt-24">
+  <h2 className="text-3xl font-bold">
+    Reflection
+  </h2>
+
+  <p className="mt-6 text-lg leading-8 text-muted">
+    This project reinforced that delivery challenges are rarely caused by a
+    lack of talent. More often, they stem from unclear priorities,
+    inconsistent communication, and weak operating systems. By redesigning
+    how the team worked—not just what they worked on—we restored
+    predictability, improved collaboration, and accelerated delivery.
+  </p>
+</section>
 
       {/* Lessons */}
 
