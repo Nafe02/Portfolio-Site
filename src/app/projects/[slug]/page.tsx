@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { allProjects } from "@/lib/data";
+import Link from "next/link";
 
 export function generateStaticParams() {
   return allProjects.map((project) => ({
@@ -284,34 +285,247 @@ export default async function ProjectPage({
   </p>
 </section>
 
-      {/* Lessons */}
+{/* Product Artefacts */}
 
-      {project.lessons && (
+<section className="mt-32">
+  <div className="max-w-3xl">
+    <p className="text-sm uppercase tracking-[0.25em] text-muted">
+      Delivery Assets
+    </p>
 
-        <section className="mt-24">
+    <h2 className="mt-4 text-4xl font-bold">
+      Product Artefacts
+    </h2>
 
-          <h2 className="text-3xl font-bold">
-            Lessons Learned
-          </h2>
+    <p className="mt-6 text-lg leading-8 text-muted">
+      Throughout the engagement, I created lightweight systems that improved
+      planning, communication, and delivery visibility. These artefacts became
+      the team's single source of truth during execution.
+    </p>
+  </div>
 
-          <ul className="mt-8 space-y-4">
+  <div className="mt-14 grid gap-10 lg:grid-cols-2">
 
-            {project.lessons.map((lesson) => (
+    {/* Sprint Board */}
 
-              <li
-                key={lesson}
-                className="border-l-2 border-accent pl-6 text-lg leading-8"
-              >
-                {lesson}
-              </li>
+    <article className="overflow-hidden rounded-lg border border-border bg-white">
 
-            ))}
+      <img
+        src="/artifacts/sprint-board.png"
+        alt="Sprint Planning Board"
+        className="w-full"
+      />
 
-          </ul>
+      <div className="p-8">
 
-        </section>
+        <p className="text-xs uppercase tracking-[0.2em] text-accent">
+          Sprint Planning
+        </p>
 
-      )}
+        <h3 className="mt-3 text-2xl font-bold">
+          Weekly Sprint Board
+        </h3>
+
+        <p className="mt-4 leading-7 text-muted">
+          Used during every sprint planning session to prioritize work,
+          identify blockers, assign ownership, and align engineering,
+          product, and design around a shared sprint goal.
+        </p>
+
+      </div>
+
+    </article>
+
+    {/* Roadmap */}
+
+    <article className="overflow-hidden rounded-lg border border-border bg-white">
+
+      <img
+        src="/artifacts/roadmap.png"
+        alt="Product Roadmap"
+        className="w-full"
+      />
+
+      <div className="p-8">
+
+        <p className="text-xs uppercase tracking-[0.2em] text-accent">
+          Strategy
+        </p>
+
+        <h3 className="mt-3 text-2xl font-bold">
+          Product Roadmap
+        </h3>
+
+        <p className="mt-4 leading-7 text-muted">
+          Connected quarterly business objectives with engineering delivery,
+          helping stakeholders understand priorities, sequencing, and release
+          timelines.
+        </p>
+
+      </div>
+
+    </article>
+
+    {/* Metrics Dashboard */}
+
+    <article className="overflow-hidden rounded-lg border border-border bg-white">
+
+      <img
+        src="/artifacts/dashboard.png"
+        alt="Sprint Metrics Dashboard"
+        className="w-full"
+      />
+
+      <div className="p-8">
+
+        <p className="text-xs uppercase tracking-[0.2em] text-accent">
+          Analytics
+        </p>
+
+        <h3 className="mt-3 text-2xl font-bold">
+          Delivery Dashboard
+        </h3>
+
+        <p className="mt-4 leading-7 text-muted">
+          Monitored sprint health, velocity, blocker resolution, completion
+          rates, and delivery trends to support data-driven retrospectives.
+        </p>
+
+      </div>
+
+    </article>
+
+    {/* Meeting Notes */}
+
+    <article className="overflow-hidden rounded-lg border border-border bg-white">
+
+      <img
+        src="/artifacts/retrospective.png"
+        alt="Sprint Retrospective"
+        className="w-full"
+      />
+
+      <div className="p-8">
+
+        <p className="text-xs uppercase tracking-[0.2em] text-accent">
+          Continuous Improvement
+        </p>
+
+        <h3 className="mt-3 text-2xl font-bold">
+          Sprint Retrospectives
+        </h3>
+
+        <p className="mt-4 leading-7 text-muted">
+          Captured lessons learned after every sprint, documented action items,
+          and tracked improvements that reduced recurring delivery issues.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+</section>
+
+{/* Lessons */}
+
+{project.lessons && (
+
+<section className="mt-24">
+
+  <h2 className="text-3xl font-bold">
+    Lessons Learned
+  </h2>
+
+  <ul className="mt-8 space-y-4">
+
+    {project.lessons.map((lesson) => (
+
+      <li
+        key={lesson}
+        className="border-l-2 border-accent pl-6 text-lg leading-8"
+      >
+        {lesson}
+      </li>
+
+    ))}
+
+  </ul>
+
+</section>
+
+)}
+
+{/* Business Impact */}
+
+<section className="mt-24">
+
+  <h2 className="text-3xl font-bold">
+    Business Impact
+  </h2>
+
+  <div className="mt-10 grid gap-8 md:grid-cols-2">
+
+    <div className="border border-border p-8">
+      <p className="text-sm uppercase tracking-[0.2em] text-muted">
+        Delivery
+      </p>
+
+      <h3 className="mt-4 text-2xl font-bold">
+        Predictable Product Delivery
+      </h3>
+
+      <p className="mt-4 text-muted leading-8">
+        Introducing structured sprint planning and weekly operating
+        rituals significantly improved delivery consistency,
+        reducing missed deadlines and improving execution across the
+        entire engineering organization.
+      </p>
+    </div>
+
+    <div className="border border-border p-8">
+      <p className="text-sm uppercase tracking-[0.2em] text-muted">
+        Team Operations
+      </p>
+
+      <h3 className="mt-4 text-2xl font-bold">
+        Stronger Cross-functional Collaboration
+      </h3>
+
+      <p className="mt-4 text-muted leading-8">
+        Designers, engineers, QA and product managers operated from a
+        single sprint framework, reducing communication gaps and making
+        priorities visible across every team.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section className="mt-32 border-t pt-16">
+
+<p className="text-sm uppercase tracking-[0.2em] text-muted">
+Next Case Study
+</p>
+
+<h2 className="mt-4 text-5xl font-bold">
+Technical Product Leadership in Fintech
+</h2>
+
+<p className="mt-6 max-w-2xl text-lg text-muted">
+How I helped engineering teams translate business requirements into
+technical delivery while improving scalability and product quality.
+</p>
+
+<Link
+  href="/projects/microbiz"
+  className="mt-10 inline-block border px-8 py-4 font-semibold hover:bg-black hover:text-white transition"
+>
+View Microbiz Case Study →
+</Link>
+
+</section>  
 
     </main>
   );
