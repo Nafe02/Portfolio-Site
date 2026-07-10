@@ -300,7 +300,7 @@ export default async function ProjectPage({
     <p className="mt-6 text-lg leading-8 text-muted">
       Throughout the engagement, I created lightweight systems that improved
       planning, communication, and delivery visibility. These artefacts became
-      the team's single source of truth during execution.
+      the team&apos;s single source of truth during execution.
     </p>
   </div>
 
