@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { allProjects } from "@/lib/data";
 import Link from "next/link";
+import ArtifactCard from "@/components/projects/ArtifactCard";
 
 export function generateStaticParams() {
   return allProjects.map((project) => ({
@@ -310,29 +311,13 @@ export default async function ProjectPage({
 
     <article className="overflow-hidden rounded-lg border border-border bg-white">
 
-      <img
-        src="/artifacts/sprint-board.png"
-        alt="Sprint Planning Board"
-        className="w-full"
-      />
-
-      <div className="p-8">
-
-        <p className="text-xs uppercase tracking-[0.2em] text-accent">
-          Sprint Planning
-        </p>
-
-        <h3 className="mt-3 text-2xl font-bold">
-          Weekly Sprint Board
-        </h3>
-
-        <p className="mt-4 leading-7 text-muted">
-          Used during every sprint planning session to prioritize work,
-          identify blockers, assign ownership, and align engineering,
-          product, and design around a shared sprint goal.
-        </p>
-
-      </div>
+     <ArtifactCard
+  image="/artifacts/sprint-board.png"
+  alt="Sprint Planning Board"
+  category="Sprint Planning"
+  title="Weekly Sprint Board"
+  description="Used during every sprint planning session to prioritize work, identify blockers, assign ownership, and align engineering, product, and design around a shared sprint goal."
+/>
 
     </article>
 
@@ -340,29 +325,13 @@ export default async function ProjectPage({
 
     <article className="overflow-hidden rounded-lg border border-border bg-white">
 
-      <img
-        src="/artifacts/roadmap.png"
-        alt="Product Roadmap"
-        className="w-full"
-      />
-
-      <div className="p-8">
-
-        <p className="text-xs uppercase tracking-[0.2em] text-accent">
-          Strategy
-        </p>
-
-        <h3 className="mt-3 text-2xl font-bold">
-          Product Roadmap
-        </h3>
-
-        <p className="mt-4 leading-7 text-muted">
-          Connected quarterly business objectives with engineering delivery,
-          helping stakeholders understand priorities, sequencing, and release
-          timelines.
-        </p>
-
-      </div>
+      <ArtifactCard
+  image="/artifacts/roadmap.png"
+  alt="Product Roadmap"
+  category="Strategy"
+  title="Product Roadmap"
+  description="Connected quarterly business objectives with engineering delivery, helping stakeholders understand priorities, sequencing, and release timelines."
+/>
 
     </article>
 
@@ -370,28 +339,13 @@ export default async function ProjectPage({
 
     <article className="overflow-hidden rounded-lg border border-border bg-white">
 
-      <img
-        src="/artifacts/dashboard.png"
-        alt="Sprint Metrics Dashboard"
-        className="w-full"
-      />
-
-      <div className="p-8">
-
-        <p className="text-xs uppercase tracking-[0.2em] text-accent">
-          Analytics
-        </p>
-
-        <h3 className="mt-3 text-2xl font-bold">
-          Delivery Dashboard
-        </h3>
-
-        <p className="mt-4 leading-7 text-muted">
-          Monitored sprint health, velocity, blocker resolution, completion
-          rates, and delivery trends to support data-driven retrospectives.
-        </p>
-
-      </div>
+     <ArtifactCard
+  image="/artifacts/dashboard.png"
+  alt="Sprint Metrics Dashboard"
+  category="Analytics"
+  title="Delivery Dashboard"
+  description="Monitored sprint health, velocity, blocker resolution, completion rates, and delivery trends to support data-driven retrospectives."
+/>
 
     </article>
 
@@ -399,28 +353,13 @@ export default async function ProjectPage({
 
     <article className="overflow-hidden rounded-lg border border-border bg-white">
 
-      <img
-        src="/artifacts/retrospective.png"
-        alt="Sprint Retrospective"
-        className="w-full"
-      />
-
-      <div className="p-8">
-
-        <p className="text-xs uppercase tracking-[0.2em] text-accent">
-          Continuous Improvement
-        </p>
-
-        <h3 className="mt-3 text-2xl font-bold">
-          Sprint Retrospectives
-        </h3>
-
-        <p className="mt-4 leading-7 text-muted">
-          Captured lessons learned after every sprint, documented action items,
-          and tracked improvements that reduced recurring delivery issues.
-        </p>
-
-      </div>
+    <ArtifactCard
+  image="/artifacts/retrospective.png"
+  alt="Sprint Retrospective"
+  category="Continuous Improvement"
+  title="Sprint Retrospectives"
+  description="Captured lessons learned after every sprint, documented action items, and tracked improvements that reduced recurring delivery issues."
+/>
 
     </article>
 
