@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { allProjects } from "@/lib/data";
 import Link from "next/link";
 import ArtifactCard from "@/components/projects/ArtifactCard";
+import SprintFramework from "@/components/projects/SprintFramework";
 
 export function generateStaticParams() {
   return allProjects.map((project) => ({
@@ -133,43 +134,7 @@ export default async function ProjectPage({
             design, and product aligned throughout every sprint.
           </p>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-
-            {project.sprintFramework.map((phase) => (
-
-              <div
-                key={phase.day}
-                className="border border-border p-8 rounded-lg"
-              >
-
-                <p className="text-sm uppercase tracking-[0.2em] text-accent">
-                  {phase.day}
-                </p>
-
-                <h3 className="mt-3 text-xl font-bold">
-                  {phase.title}
-                </h3>
-
-                <ul className="mt-6 space-y-3">
-
-                  {phase.activities.map((activity) => (
-
-                    <li
-                      key={activity}
-                      className="text-muted"
-                    >
-                      • {activity}
-                    </li>
-
-                  ))}
-
-                </ul>
-
-              </div>
-
-            ))}
-
-          </div>
+          <SprintFramework phases={project.sprintFramework} />
 
         </section>
       )}
@@ -307,61 +272,16 @@ export default async function ProjectPage({
 
   <div className="mt-14 grid gap-10 lg:grid-cols-2">
 
-    {/* Sprint Board */}
-
-    <article className="overflow-hidden rounded-lg border border-border bg-white">
-
-     <ArtifactCard
-  image="/artifacts/sprint-board.png"
-  alt="Sprint Planning Board"
-  category="Sprint Planning"
-  title="Weekly Sprint Board"
-  description="Used during every sprint planning session to prioritize work, identify blockers, assign ownership, and align engineering, product, and design around a shared sprint goal."
-/>
-
-    </article>
-
-    {/* Roadmap */}
-
-    <article className="overflow-hidden rounded-lg border border-border bg-white">
-
-      <ArtifactCard
-  image="/artifacts/roadmap.png"
-  alt="Product Roadmap"
-  category="Strategy"
-  title="Product Roadmap"
-  description="Connected quarterly business objectives with engineering delivery, helping stakeholders understand priorities, sequencing, and release timelines."
-/>
-
-    </article>
-
-    {/* Metrics Dashboard */}
-
-    <article className="overflow-hidden rounded-lg border border-border bg-white">
-
-     <ArtifactCard
-  image="/artifacts/dashboard.png"
-  alt="Sprint Metrics Dashboard"
-  category="Analytics"
-  title="Delivery Dashboard"
-  description="Monitored sprint health, velocity, blocker resolution, completion rates, and delivery trends to support data-driven retrospectives."
-/>
-
-    </article>
-
-    {/* Meeting Notes */}
-
-    <article className="overflow-hidden rounded-lg border border-border bg-white">
-
-    <ArtifactCard
-  image="/artifacts/retrospective.png"
-  alt="Sprint Retrospective"
-  category="Continuous Improvement"
-  title="Sprint Retrospectives"
-  description="Captured lessons learned after every sprint, documented action items, and tracked improvements that reduced recurring delivery issues."
-/>
-
-    </article>
+    {project.artifacts?.map((artifact) => (
+  <ArtifactCard
+    key={artifact.title}
+    image={artifact.image}
+    alt={artifact.title}
+    category={artifact.category}
+    title={artifact.title}
+    description={artifact.description}
+  />
+))}
 
   </div>
 </section>
