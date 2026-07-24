@@ -509,6 +509,132 @@ artifacts: [
   },
 
   {
+  slug: "nextcba",
+
+  title: "Building Delivery Discipline Across a Distributed Core Banking Team",
+
+  company: "NextCBA",
+
+  role: "Project Manager",
+
+  duration: "March 2024 – July 2025",
+
+  category: "Fintech / Banking",
+
+  metric: "40% Faster Release Cadence",
+
+  featured: true,
+
+  summary:
+    "Led delivery across a distributed fintech team building a core banking application, coordinating complex banking initiatives and improving release speed through structured Agile execution.",
+
+  overview:
+    "NextCBA is a Core Banking Application designed to support essential banking operations and financial services. As Project Manager, I coordinated engineering, QA, and operations teams across multiple product development cycles, overseeing initiatives including NIBSS integration, POS capabilities, Naira and Dollar card creation, and the UI/UX development of the core banking platform.",
+
+  challenge:
+    "The cross-functional team worked remotely without a shared office or physical base. This created coordination challenges across engineering, QA, and operations, making it difficult to maintain alignment and consistently meet delivery targets while working on complex banking initiatives.",
+
+  crisis:
+    "As the product expanded across multiple banking initiatives, coordination became increasingly difficult. Dependencies between engineering, QA, and operations were harder to track remotely, creating challenges around alignment, prioritization, and delivery timelines.",
+
+  pivot:
+    "I strengthened the Agile delivery process by introducing more structured backlog prioritization, sprint planning, cross-functional coordination, and regular performance reviews. This created clearer ownership, improved visibility across workstreams, and helped the team make more data-informed delivery decisions.",
+
+  solution:
+    "I coordinated multiple fintech product development cycles across engineering, QA, and operations, prioritized the product backlog, facilitated sprint planning, monitored delivery performance, and maintained stakeholder visibility through regular reporting.",
+
+  impact:
+    "The improved delivery structure resulted in a 40% faster release cadence and a 30% improvement in feature delivery predictability, while enabling the distributed team to coordinate more effectively across complex banking initiatives.",
+
+  teamSize: "Distributed Cross-functional Team",
+
+  tools: [
+    "Agile",
+    "Sprint Planning",
+    "Backlog Management",
+    "Stakeholder Reporting",
+  ],
+
+  responsibilities: [
+    "Project Planning",
+    "Backlog Prioritization",
+    "Sprint Planning",
+    "Cross-functional Coordination",
+    "Stakeholder Reporting",
+    "Product Performance Reviews",
+    "Delivery Tracking",
+  ],
+
+  initiatives: [
+    "NIBSS Integration",
+    "POS Capabilities",
+    "Naira Card Creation",
+    "Dollar Card Creation",
+    "Core Banking UI/UX",
+  ],
+
+  metrics: [
+    {
+      label: "Release Cadence",
+      value: "+40%",
+    },
+    {
+      label: "Delivery Predictability",
+      value: "+30%",
+    },
+    {
+      label: "Product",
+      value: "Core Banking App",
+    },
+    {
+      label: "Team",
+      value: "Distributed",
+    },
+  ],
+
+  lessons: [
+    "Remote teams need stronger operating systems, not just more communication.",
+    "Clear backlog prioritization improves delivery predictability.",
+    "Cross-functional alignment is critical when banking systems have interconnected dependencies.",
+    "Data-informed performance reviews help teams make better delivery decisions.",
+  ],
+
+  artifacts: [
+  {
+    image: "/artifacts/nextcba-roadmap.png",
+    category: "Strategy",
+    title: "Core Banking Application Roadmap",
+    description:
+      "Connected major banking initiatives including NIBSS integration, POS capabilities, card creation, and core banking UI/UX development to a structured delivery timeline.",
+  },
+
+  {
+    image: "/artifacts/nextcba-delivery-board.png",
+    category: "Delivery Management",
+    title: "Cross-functional Delivery Board",
+    description:
+      "Provided a shared view of workstreams across engineering, QA, and operations, making progress, ownership, dependencies, and delivery blockers easier to track across the distributed team.",
+  },
+
+  {
+    image: "/artifacts/nextcba-release-dashboard.png",
+    category: "Analytics",
+    title: "Release Trends & Delivery Metrics",
+    description:
+      "Tracked release cadence, delivery predictability, sprint performance, and velocity trends to support data-informed performance reviews and improve delivery decisions.",
+  },
+
+  {
+    image: "/artifacts/nextcba-performance-review.png",
+    category: "Performance Review",
+    title: "Product Performance Review",
+    description:
+      "A structured performance review used to evaluate delivery cadence, feature predictability, cross-functional blockers, and improvement opportunities across the distributed core banking team.",
+  },
+],
+},
+
+  {
     slug: "team-scale",
     title: "Team at Scale",
     summary:
