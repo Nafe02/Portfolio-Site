@@ -635,20 +635,133 @@ artifacts: [
 },
 
   {
-    slug: "team-scale",
-    title: "Team at Scale",
-    summary:
-      "Built product org practices that took a team from 4 to 28 while maintaining shipping velocity.",
-    category: "Leadership",
-    metric: "Ship cadence held at 2-week cycles",
-    featured: true,
-    challenge:
-      "Rapid hiring threatened quality and alignment.",
-    solution:
-      "Introduced lightweight rituals, clear ownership, and outcome metrics.",
-    impact:
-      "Maintained 2-week release cadence through 7× team growth.",
+  slug: "albatross",
+
+  title: "Improving Travel Coordination for Destination Wedding Guests",
+
+  company: "Albatross",
+
+  role: "Project Manager",
+
+  duration: "August 2025 – Present",
+
+  category: "Travel / AI",
+
+  metric: "35% Improved Delivery Accuracy",
+
+  featured: true,
+
+  summary:
+    "Led remote product teams building an AI-powered travel planning platform that helps destination wedding guests discover curated experiences, coordinate itineraries, manage group activities, and simplify shared payments.",
+
+  overview:
+    "Albatross is an AI-powered travel planning platform designed for destination wedding guests. The platform connects guests with bride- and groom-recommended hotels, activities, and services while helping them coordinate itineraries, join group activities, split payments, extend their trips, and access expert support through a travel concierge.",
+
+  challenge:
+    "The platform needed to coordinate complex travel experiences across distributed product teams while supporting multiple connected workflows, including recommendations, itineraries, group activities, shared payments, and travel services.",
+
+  crisis:
+    "The Stripe payment integration became a major delivery challenge after communication between Stripe and the company was lost. This created uncertainty around the payment integration and threatened the reliability of an important customer workflow.",
+
+  pivot:
+    "I helped coordinate the transition from Stripe to PagBank, enabling the team to move forward with a payment provider that better supported the project's immediate delivery needs and restored momentum to the payment integration process.",
+
+  solution:
+    "I led remote product teams through structured sprint-based delivery cycles, coordinated designers and developers, improved delivery visibility through Jira, and supported the transition to PagBank to simplify the payment experience for customers.",
+
+  impact:
+    "The team improved delivery accuracy by 35%, reduced task turnaround time by 25%, increased system usability by 20%, and successfully enabled a simpler payment experience for customers through the PagBank integration.",
+
+  teamSize: "Remote Cross-functional Product Team",
+
+  tools: [
+    "Jira",
+    "Agile",
+    "Sprint Planning",
+    "Progress Tracking",
+  ],
+
+  responsibilities: [
+    "Project Planning",
+    "Sprint Planning",
+    "Remote Team Leadership",
+    "Cross-functional Coordination",
+    "Jira Progress Tracking",
+    "UX/UI Collaboration",
+    "Payment Integration Coordination",
+    "Delivery Monitoring",
+  ],
+
+  initiatives: [
+    "AI Travel Planning Platform",
+    "Curated Travel Recommendations",
+    "Guest Itinerary Coordination",
+    "Group Activity Planning",
+    "Shared Payment Experience",
+    "PagBank Payment Integration",
+    "Travel Concierge Support",
+  ],
+
+  metrics: [
+    {
+      label: "Delivery Accuracy",
+      value: "+35%",
+    },
+    {
+      label: "Task Turnaround Time",
+      value: "-25%",
+    },
+    {
+      label: "System Usability",
+      value: "+20%",
+    },
+    {
+      label: "Team",
+      value: "Remote",
+    },
+  ],
+
+  lessons: [
+    "External dependencies can become critical delivery risks when communication breaks down.",
+    "The ability to adapt integrations is essential when project dependencies change.",
+    "Structured sprint cycles improve accountability across distributed teams.",
+    "Progress visibility helps remote teams coordinate more effectively.",
+  ],
+  
+  artifacts: [
+  {
+    image: "/artifacts/albatross-jira-dashboard.png",
+    category: "Analytics",
+    title: "Jira Progress Tracking Dashboard",
+    description:
+      "Designed a progress-tracking dashboard in Jira to improve visibility, accountability, and delivery coordination across distributed product teams.",
   },
+
+  {
+    image: "/artifacts/albatross-sprint-board.png",
+    category: "Delivery Management",
+    title: "Sprint Delivery Board",
+    description:
+      "Established sprint-based delivery cycles that created clearer ownership, improved delivery visibility, and reduced task turnaround time.",
+  },
+
+  {
+    image: "/artifacts/albatross-user-journey.png",
+    category: "UX / Product Discovery",
+    title: "Destination Wedding Guest Journey",
+    description:
+      "Mapped the guest experience from discovering couple-recommended travel options through itinerary planning, group activities, shared payments, and travel concierge support.",
+  },
+
+  {
+    image: "/artifacts/albatross-payment-integration.png",
+    category: "Payments",
+    title: "Payment Integration Transition",
+    description:
+      "Coordinated the transition from Stripe to PagBank after communication with Stripe was lost, helping restore payment integration progress and simplify the customer payment experience.",
+  },
+],
+},
 
   
 ];
