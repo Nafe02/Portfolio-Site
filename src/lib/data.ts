@@ -48,7 +48,7 @@ export type Project = {
   }[];
 };
 
-export const featuredProjects: Project[] = [
+export const allProjects: Project[] = [
   {
     slug: "ilim-tutor",
 
@@ -635,6 +635,137 @@ export const featuredProjects: Project[] = [
   },
 
   {
+    slug: "mufasa-labs",
+
+    title:
+      "Coordinating Blockchain and Backend Development for a Non-Custodial Crypto Platform",
+
+    company: "Mufasa Labs",
+
+    role: "Project Manager",
+
+    duration: "December 2024 – May 2025",
+
+    category: "Crypto / Fintech",
+
+    metric: "Daily Cross-team Coordination",
+
+    featured: false,
+
+    summary:
+      "Led project planning and cross-functional coordination for a non-custodial crypto platform designed to make digital assets more accessible across West Africa.",
+
+    overview:
+      "Mufasa Labs is a non-custodial crypto platform that enables users in West Africa to buy, sell, and exchange cryptocurrencies through Orange Money, Wave, Yas, Visa, and Mastercard. As Project Manager, I coordinated the development of the platform across blockchain, backend, and frontend teams.",
+
+    challenge:
+      "The project required close coordination between blockchain development, backend engineering, and frontend development. Because the teams worked remotely without a shared office, communication gaps emerged between the backend and blockchain teams, making it more difficult to coordinate technical dependencies and maintain delivery alignment.",
+
+    crisis:
+      "Communication gaps between the backend and blockchain development teams created coordination challenges around technical dependencies. Without regular direct interaction, important discussions could be delayed, increasing the risk of misalignment between interconnected parts of the platform.",
+
+    pivot:
+      "I introduced more direct and consistent communication between the teams by proactively scheduling calls and bringing the relevant developers together to discuss dependencies, clarify requirements, and resolve blockers.",
+
+    solution:
+      "I managed project scope, built and coordinated the project team, established delivery deadlines, monitored project progress, managed project resources, coordinated communication between technical teams, and evaluated project performance throughout the development process.",
+
+    impact:
+      "The introduction of regular direct coordination between the backend and blockchain teams improved communication visibility, helped surface technical dependencies earlier, and created a more structured way for remote teams to resolve blockers and maintain alignment during platform development.",
+
+    teamSize: "Remote Cross-functional Technical Team",
+
+    tools: [
+      "Project Planning",
+      "Scope Management",
+      "Team Coordination",
+      "Deadline Management",
+      "Stakeholder Management",
+    ],
+
+    responsibilities: [
+      "Project Scope Planning",
+      "Team Formation and Leadership",
+      "Project Scheduling",
+      "Progress Monitoring",
+      "Cross-functional Coordination",
+      "Resource and Budget Management",
+      "Stakeholder Management",
+      "Project Performance Evaluation",
+    ],
+
+    initiatives: [
+      "Blockchain Development",
+      "Backend Development",
+      "Frontend Development",
+      "Non-custodial Crypto Platform",
+      "Mobile Money Integration",
+      "Crypto Trading Infrastructure",
+    ],
+
+    metrics: [
+      {
+        label: "Coordination",
+        value: "Daily",
+      },
+      {
+        label: "Development Areas",
+        value: "3",
+      },
+      {
+        label: "Platform",
+        value: "Non-custodial",
+      },
+      {
+        label: "Team",
+        value: "Remote",
+      },
+    ],
+
+      lessons: [
+    "Remote technical teams need intentional communication structures.",
+    "Dependencies between blockchain and backend systems require early coordination.",
+    "Project managers can reduce technical friction by creating direct communication channels.",
+    "Consistent communication is essential when distributed teams are building interconnected systems.",
+  ],
+
+  artifacts: [
+    {
+      image: "/artifacts/mufasa-scope-plan.png",
+      category: "Project Planning",
+      title: "Project Scope & Delivery Plan",
+      description:
+        "Structured the project scope, key development areas, responsibilities, milestones, and delivery deadlines across the blockchain, backend, and frontend teams.",
+    },
+
+    {
+      image: "/artifacts/mufasa-dependency-map.png",
+      category: "Technical Coordination",
+      title: "Cross-team Dependency Map",
+      description:
+        "Mapped dependencies between blockchain, backend, and frontend development to make technical handoffs, integration points, and potential coordination risks easier to identify.",
+    },
+
+    {
+      image: "/artifacts/mufasa-coordination-framework.png",
+      category: "Team Coordination",
+      title: "Remote Coordination Framework",
+      description:
+        "Established a structured communication rhythm that brought remote technical teams together to discuss dependencies, clarify requirements, and resolve blockers.",
+    },
+
+    {
+      image: "/artifacts/mufasa-platform-architecture.png",
+      category: "Technical Delivery",
+      title: "Platform Architecture Overview",
+      description:
+        "Provided a high-level view of how the frontend, backend, blockchain layer, and payment rails connected to support the non-custodial crypto platform.",
+    },
+  ],
+},
+
+
+  {
     slug: "albatross",
 
     title: "Improving Travel Coordination for Destination Wedding Guests",
@@ -768,138 +899,9 @@ export const featuredProjects: Project[] = [
 
 
 
-export const allProjects: Project[] = [
-  ...featuredProjects,
-  {
-    slug: "mufasa-labs",
-
-    title:
-      "Coordinating Blockchain and Backend Development for a Non-Custodial Crypto Platform",
-
-    company: "Mufasa Labs",
-
-    role: "Project Manager",
-
-    duration: "December 2024 – May 2025",
-
-    category: "Crypto / Fintech",
-
-    metric: "Daily Cross-team Coordination",
-
-    featured: false,
-
-    summary:
-      "Led project planning and cross-functional coordination for a non-custodial crypto platform designed to make digital assets more accessible across West Africa.",
-
-    overview:
-      "Mufasa Labs is a non-custodial crypto platform that enables users in West Africa to buy, sell, and exchange cryptocurrencies through Orange Money, Wave, Yas, Visa, and Mastercard. As Project Manager, I coordinated the development of the platform across blockchain, backend, and frontend teams.",
-
-    challenge:
-      "The project required close coordination between blockchain development, backend engineering, and frontend development. Because the teams worked remotely without a shared office, communication gaps emerged between the backend and blockchain teams, making it more difficult to coordinate technical dependencies and maintain delivery alignment.",
-
-    crisis:
-      "Communication gaps between the backend and blockchain development teams created coordination challenges around technical dependencies. Without regular direct interaction, important discussions could be delayed, increasing the risk of misalignment between interconnected parts of the platform.",
-
-    pivot:
-      "I introduced more direct and consistent communication between the teams by proactively scheduling calls and bringing the relevant developers together to discuss dependencies, clarify requirements, and resolve blockers.",
-
-    solution:
-      "I managed project scope, built and coordinated the project team, established delivery deadlines, monitored project progress, managed project resources, coordinated communication between technical teams, and evaluated project performance throughout the development process.",
-
-    impact:
-      "The introduction of regular direct coordination between the backend and blockchain teams improved communication visibility, helped surface technical dependencies earlier, and created a more structured way for remote teams to resolve blockers and maintain alignment during platform development.",
-
-    teamSize: "Remote Cross-functional Technical Team",
-
-    tools: [
-      "Project Planning",
-      "Scope Management",
-      "Team Coordination",
-      "Deadline Management",
-      "Stakeholder Management",
-    ],
-
-    responsibilities: [
-      "Project Scope Planning",
-      "Team Formation and Leadership",
-      "Project Scheduling",
-      "Progress Monitoring",
-      "Cross-functional Coordination",
-      "Resource and Budget Management",
-      "Stakeholder Management",
-      "Project Performance Evaluation",
-    ],
-
-    initiatives: [
-      "Blockchain Development",
-      "Backend Development",
-      "Frontend Development",
-      "Non-custodial Crypto Platform",
-      "Mobile Money Integration",
-      "Crypto Trading Infrastructure",
-    ],
-
-    metrics: [
-      {
-        label: "Coordination",
-        value: "Daily",
-      },
-      {
-        label: "Development Areas",
-        value: "3",
-      },
-      {
-        label: "Platform",
-        value: "Non-custodial",
-      },
-      {
-        label: "Team",
-        value: "Remote",
-      },
-    ],
-
-      lessons: [
-    "Remote technical teams need intentional communication structures.",
-    "Dependencies between blockchain and backend systems require early coordination.",
-    "Project managers can reduce technical friction by creating direct communication channels.",
-    "Consistent communication is essential when distributed teams are building interconnected systems.",
-  ],
-
-  artifacts: [
-    {
-      image: "/artifacts/mufasa-scope-plan.png",
-      category: "Project Planning",
-      title: "Project Scope & Delivery Plan",
-      description:
-        "Structured the project scope, key development areas, responsibilities, milestones, and delivery deadlines across the blockchain, backend, and frontend teams.",
-    },
-
-    {
-      image: "/artifacts/mufasa-dependency-map.png",
-      category: "Technical Coordination",
-      title: "Cross-team Dependency Map",
-      description:
-        "Mapped dependencies between blockchain, backend, and frontend development to make technical handoffs, integration points, and potential coordination risks easier to identify.",
-    },
-
-    {
-      image: "/artifacts/mufasa-coordination-framework.png",
-      category: "Team Coordination",
-      title: "Remote Coordination Framework",
-      description:
-        "Established a structured communication rhythm that brought remote technical teams together to discuss dependencies, clarify requirements, and resolve blockers.",
-    },
-
-    {
-      image: "/artifacts/mufasa-platform-architecture.png",
-      category: "Technical Delivery",
-      title: "Platform Architecture Overview",
-      description:
-        "Provided a high-level view of how the frontend, backend, blockchain layer, and payment rails connected to support the non-custodial crypto platform.",
-    },
-  ],
-},
-];
+export const featuredProjects = allProjects.filter(
+  (project) => project.featured
+);
 
 export const navLinks = [
   { href: "/", label: "Home" },
