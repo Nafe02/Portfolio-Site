@@ -2,12 +2,14 @@ import Link from "next/link";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
-import { PageTransition } from "@/components/PageTransition";
 import { featuredProjects } from "@/lib/data";
+import { FadeIn } from "@/components/FadeIn";
+import { motion } from "motion/react";
+import { AnimatedButton } from "@/components/AnimatedButton";
 
 export default function HomePage() {
   return (
-    <PageTransition>
+    <>
       {/* Hero */}
       <section className="mx-auto max-w-content px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-24 lg:px-12 lg:pt-28">
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-8">
@@ -15,25 +17,32 @@ export default function HomePage() {
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted">
               Product Leader · Builder · Strategist
             </p>
+           <FadeIn>
             <h1 className="mt-6 font-display text-5xl font-bold uppercase leading-[0.92] tracking-tight text-ink text-balance sm:text-6xl md:text-7xl lg:text-8xl">
               I build products and teams that ship with clarity.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
             “I help startups and scaling companies turn ambiguity into momentum — from zero-to-one launches to operational systems that enable teams to move faster with clarity.”
             </p>
+             </FadeIn>
             <div className="mt-10 flex flex-wrap items-center gap-6">
-              <Link
-                href="/projects"
-                className="inline-flex bg-accent px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-accent/90"
-              >
-                View Case Studies
-              </Link>
-              <Link
-                href="/about"
-                className="text-sm font-medium uppercase tracking-wider text-ink transition-colors hover:text-accent"
-              >
-                About me →
-              </Link>
+              <AnimatedButton>
+  <Link
+    href="/projects"
+    className="inline-flex bg-accent px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-accent/90"
+  >
+    View Case Studies
+  </Link>
+</AnimatedButton>
+              <AnimatedButton>
+  <Link
+    href="/about"
+    className="text-sm font-medium uppercase tracking-wider text-ink transition-colors hover:text-accent"
+  >
+    About me →
+  </Link>
+</AnimatedButton>
+
             </div>
           </div>
 
@@ -117,7 +126,7 @@ export default function HomePage() {
                 reflective introduction.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-muted md:text-xl">
-                On the About page you,ll find my story, philosophy, and how
+                On the About page you&apos;ll find my story, philosophy, and how
                 I approach building products and leading people.
               </p>
               <Link
@@ -157,6 +166,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "motion/react";
 import type { Project } from "@/lib/data";
 
 type ProjectCardProps = {
@@ -8,11 +11,16 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   return (
-    <article
-      className={`group flex flex-col border-t border-border pt-8 transition-colors ${
-        featured ? "md:pt-10" : ""
-      }`}
-    >
+   <motion.article
+  whileHover={{ y: -4 }}
+  transition={{
+    duration: 0.2,
+    ease: "easeOut",
+  }}
+  className={`group flex flex-col border-t border-border pt-8 transition-colors ${
+    featured ? "md:pt-10" : ""
+  }`}
+>
       <div className="mb-4 flex items-start justify-between gap-4">
         <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
           {project.category}
@@ -66,10 +74,14 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-accent"
 >
   View case study
-  <span aria-hidden className="transition-transform group-hover:translate-x-1">
-    →
-  </span>
+ <motion.span
+  aria-hidden
+  whileHover={{ x: 4 }}
+  transition={{ duration: 0.2 }}
+>
+  →
+</motion.span>
 </Link>
-    </article>
+   </motion.article>
   );
 }

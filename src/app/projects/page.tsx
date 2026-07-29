@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageTransition } from "@/components/PageTransition";
 import { ProjectCard } from "@/components/ProjectCard";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { allProjects } from "@/lib/data";
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <PageTransition>
+    <>
       <section className="mx-auto max-w-content px-6 pb-12 pt-16 md:px-10 md:pb-16 md:pt-24 lg:px-12 lg:pt-28">
         <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted">
         Case Studies
@@ -49,6 +48,6 @@ export default function ProjectsPage() {
           <NewsletterForm variant="cta" className="mt-8 max-w-xl" />
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

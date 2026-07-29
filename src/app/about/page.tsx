@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageTransition } from "@/components/PageTransition";
 import { SectionHeading } from "@/components/SectionHeading";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
@@ -65,7 +64,7 @@ const industries = [
 
 export default function AboutPage() {
   return (
-    <PageTransition>
+     <>
       <section className="mx-auto max-w-content px-6 pb-12 pt-16 md:px-10 md:pb-16 md:pt-24 lg:px-12 lg:pt-28">
         <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted">
           About
@@ -289,6 +288,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }
