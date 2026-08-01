@@ -47,14 +47,14 @@ export default function HomePage() {
           </div>
 
           <div className="order-1  w-full  lg:order-2 lg:col-span-4 lg:col-start-9 lg:pt-4">
-            <div className="overflow-hidden">
+            <div className="group overflow-hidden rounded-lg">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/my-image.png"
                 alt="Nafiu Gwandu, product leader"
                 width={800}
                 height={1000}
-                className="aspect-[4/5] w-full object-cover object-[center_20%]"
+                className="aspect-[4/5] w-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           </div>
@@ -78,6 +78,7 @@ export default function HomePage() {
       </section>
 
       {/* Case Studies */}
+      <FadeIn>
       <section
         className="border-t border-border bg-white"
         aria-labelledby="featured-heading"
@@ -106,8 +107,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* About preview */}
+      <FadeIn>
       <section className="border-t border-border" aria-labelledby="about-preview-heading">
         <div className="mx-auto max-w-content px-6 py-20 md:px-10 md:py-28 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-8">
@@ -139,8 +142,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* Newsletter CTA */}
+      <FadeIn>
       <section
         className="bg-ink text-white"
         aria-labelledby="newsletter-cta-heading"
@@ -166,6 +171,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </FadeIn>
     </>
   );
 }

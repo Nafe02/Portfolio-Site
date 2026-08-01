@@ -3,6 +3,7 @@ import { allProjects } from "@/lib/data";
 import Link from "next/link";
 import ArtifactCard from "@/components/projects/ArtifactCard";
 import SprintFramework from "@/components/projects/SprintFramework";
+import { FadeIn } from "@/components/FadeIn";
 
 export function generateStaticParams() {
   return allProjects.map((project) => ({
@@ -22,13 +23,17 @@ export default async function ProjectPage({
   if (!project) {
     notFound();
   }
+  const currentIndex = allProjects.findIndex((p) => p.slug === slug);
+
+const nextProject =
+  allProjects[(currentIndex + 1) % allProjects.length];
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-20">
 
       {/* Hero */}
 
-      <div className="max-w-4xl">
+      <FadeIn className="max-w-4xl">
         <p className="text-sm uppercase tracking-[0.25em] text-muted">
           {project.category}
         </p>
@@ -40,16 +45,18 @@ export default async function ProjectPage({
         <p className="mt-8 text-xl leading-relaxed text-muted">
           {project.summary}
         </p>
-      </div>
+      </FadeIn>
 
       {/* Project Info */}
 
-      <div className="mt-20 grid gap-10 border-t pt-10 md:grid-cols-4">
+      <FadeIn className="mt-20">
+  <div className="grid gap-10 border-t pt-10 md:grid-cols-4">
 
         <div>
           <p className="text-xs uppercase text-muted">Company</p>
           <p className="mt-2 font-semibold">{project.company}</p>
         </div>
+        
 
         <div>
           <p className="text-xs uppercase text-muted">Role</p>
@@ -67,22 +74,26 @@ export default async function ProjectPage({
         </div>
 
       </div>
+      </FadeIn>
 
       {/* Overview */}
 
       {project.overview && (
-        <section className="mt-24">
+        <FadeIn>
+  <section className="mt-24">
           <h2 className="text-3xl font-bold">Overview</h2>
 
           <p className="mt-6 text-lg leading-8 text-muted">
             {project.overview}
           </p>
         </section>
+</FadeIn>
       )}
 
       {/* Challenge */}
 
-      <section className="mt-24">
+      <FadeIn>
+  <section className="mt-24">
         <h2 className="text-3xl font-bold">
           The Challenge
         </h2>
@@ -90,12 +101,14 @@ export default async function ProjectPage({
         <p className="mt-6 text-lg leading-8 text-muted">
           {project.challenge}
         </p>
-      </section>
+     </section>
+</FadeIn>
 
       {/* Crisis */}
 
       {project.crisis && (
-        <section className="mt-24">
+        <FadeIn>
+  <section className="mt-24">
           <h2 className="text-3xl font-bold">
             The Crisis Point
           </h2>
@@ -104,12 +117,14 @@ export default async function ProjectPage({
             {project.crisis}
           </p>
         </section>
+</FadeIn>
       )}
 
       {/* Pivot */}
 
       {project.pivot && (
-        <section className="mt-24">
+       <FadeIn>
+  <section className="mt-24">
           <h2 className="text-3xl font-bold">
             Strategic Pivot
           </h2>
@@ -117,13 +132,15 @@ export default async function ProjectPage({
           <p className="mt-6 text-lg leading-8 text-muted">
             {project.pivot}
           </p>
-        </section>
+         </section>
+</FadeIn>
       )}
 
       {/* Sprint Framework */}
 
       {project.sprintFramework && (
-        <section className="mt-24">
+        <FadeIn>
+  <section className="mt-24">
 
           <h2 className="text-3xl font-bold">
             Sprint Operating System
@@ -136,13 +153,15 @@ export default async function ProjectPage({
 
           <SprintFramework phases={project.sprintFramework} />
 
-        </section>
+         </section>
+</FadeIn>
       )}
 
       {/* Responsibilities */}
 
 {project.responsibilities && (
-  <section className="mt-24">
+  <FadeIn>
+    <section className="mt-24">
     <h2 className="text-3xl font-bold">
       My Responsibilities
     </h2>
@@ -159,13 +178,16 @@ export default async function ProjectPage({
         </div>
       ))}
     </div>
-  </section>
+     </section>
+  </FadeIn>
 )}
+
 
 {/* Key Initiatives */}
 
 {project.initiatives && (
-  <section className="mt-24">
+  <FadeIn>
+    <section className="mt-24">
     <h2 className="text-3xl font-bold">
       Key Initiatives
     </h2>
@@ -182,12 +204,15 @@ export default async function ProjectPage({
         </div>
       ))}
     </div>
-  </section>
+      </section>
+  </FadeIn>
 )}
+
 
       {/* Solution */}
 
-      <section className="mt-24">
+      <FadeIn>
+  <section className="mt-24">
 
         <h2 className="text-3xl font-bold">
           My Approach
@@ -198,13 +223,13 @@ export default async function ProjectPage({
         </p>
 
       </section>
+</FadeIn>
 
       {/* Results */}
 
       {project.metrics && (
-
-        <section className="mt-24">
-
+  <FadeIn>
+    <section className="mt-24">
           <h2 className="text-3xl font-bold">
             Results
           </h2>
@@ -233,11 +258,13 @@ export default async function ProjectPage({
           </div>
 
         </section>
-
+  </FadeIn>
 )}   
 
       {/* Reflection */}
-      <section className="mt-24">
+      <FadeIn>
+  <section className="mt-32">
+
   <h2 className="text-3xl font-bold">
     Reflection
   </h2>
@@ -249,11 +276,13 @@ export default async function ProjectPage({
     how the team worked—not just what they worked on—we restored
     predictability, improved collaboration, and accelerated delivery.
   </p>
-</section>
+  </section>
+</FadeIn>
 
 {/* Product Artefacts */}
 
-<section className="mt-32">
+<FadeIn>
+  <section className="mt-32">
   <div className="max-w-3xl">
     <p className="text-sm uppercase tracking-[0.25em] text-muted">
       Delivery Assets
@@ -285,12 +314,12 @@ export default async function ProjectPage({
 
   </div>
 </section>
+</FadeIn>
 
 {/* Lessons */}
-
 {project.lessons && (
-
-<section className="mt-24">
+  <FadeIn>
+    <section className="mt-24">
 
   <h2 className="text-3xl font-bold">
     Lessons Learned
@@ -310,14 +339,14 @@ export default async function ProjectPage({
     ))}
 
   </ul>
-
-</section>
-
+ </section>
+  </FadeIn>
 )}
 
 {/* Business Impact */}
 
-<section className="mt-24">
+<FadeIn>
+  <section className="mt-24">
 
   <h2 className="text-3xl font-bold">
     Business Impact
@@ -360,31 +389,31 @@ export default async function ProjectPage({
 
   </div>
 
-</section>
+ </section>
+</FadeIn>
 
-<section className="mt-32 border-t pt-16">
+<FadeIn>
+  <section className="mt-32 border-t pt-16">
+    <p className="text-sm uppercase tracking-[0.2em] text-muted">
+      Next Case Study
+    </p>
 
-<p className="text-sm uppercase tracking-[0.2em] text-muted">
-Next Case Study
-</p>
+    <h2 className="mt-4 text-5xl font-bold">
+      {nextProject.title}
+    </h2>
 
-<h2 className="mt-4 text-5xl font-bold">
-Technical Product Leadership in Fintech
-</h2>
+    <p className="mt-6 max-w-2xl text-lg text-muted">
+      {nextProject.summary}
+    </p>
 
-<p className="mt-6 max-w-2xl text-lg text-muted">
-How I helped engineering teams translate business requirements into
-technical delivery while improving scalability and product quality.
-</p>
-
-<Link
-  href="/projects/microbiz"
-  className="mt-10 inline-block border px-8 py-4 font-semibold hover:bg-black hover:text-white transition"
->
-View Microbiz Case Study →
-</Link>
-
-</section>  
+    <Link
+      href={`/projects/${nextProject.slug}`}
+      className="mt-10 inline-block border px-8 py-4 font-semibold transition hover:bg-black hover:text-white"
+    >
+      View {nextProject.company} Case Study →
+    </Link>
+  </section>
+</FadeIn> 
 
     </main>
   );

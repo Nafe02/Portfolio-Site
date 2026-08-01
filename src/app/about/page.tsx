@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/SectionHeading";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
@@ -25,7 +26,7 @@ const experience = [
   {
     period: "2024 — 2025",
     role: "Project Manager",
-    company: "MufasaX.",
+    company: "Mufasa Labs.",
     detail: "I plan and develop the project scope, Create and lead a team, monitor project progress and set deadlines. I overcome obstacles, manage the project budget, ensure stakeholder satisfaction, and evaluate project performance.",
   },
   {
@@ -65,6 +66,7 @@ const industries = [
 export default function AboutPage() {
   return (
      <>
+     <FadeIn>
       <section className="mx-auto max-w-content px-6 pb-12 pt-16 md:px-10 md:pb-16 md:pt-24 lg:px-12 lg:pt-28">
         <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted">
           About
@@ -77,8 +79,10 @@ export default function AboutPage() {
           competitive advantage. I&apos;m passionate about bringing ideas to life. Proficient in project and management, cross-team communication, and best-in-class customer service. Enjoys finding creative solutions in customer service, marketing, and web development initiatives.
         </p>
       </section>
+      </FadeIn>
 
       {/* Story */}
+      <FadeIn>
       <section className="border-t border-border">
         <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-12">
@@ -106,15 +110,19 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* Philosophy */}
+      <FadeIn>
       <section className="border-t border-border bg-ink/[0.02]">
         <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24 lg:px-12">
-          <SectionHeading
-            eyebrow="Philosophy"
-            title="Clarity over noise"
-            description="A few beliefs that guide how I build products and lead teams. Placeholder philosophy copy."
-          />
+         <FadeIn>
+  <SectionHeading
+    eyebrow="Philosophy"
+    title="Clarity over noise"
+    description="A few beliefs that guide how I build products and lead teams."
+  />
+</FadeIn>
           <ul className="mt-12 grid gap-8 md:grid-cols-3">
             {[
               {
@@ -130,23 +138,25 @@ export default function AboutPage() {
                 body: "The best teams invite disagreement early, decide clearly, and commit fully once the call is made.",
               },
             ].map((item) => (
-              <li
-                key={item.title}
-                className="border-t border-border pt-6"
-              >
-                <h3 className="font-display text-xl font-bold uppercase text-ink">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {item.body}
-                </p>
-              </li>
+              <FadeIn key={item.title}>
+  <li className="border-t border-border pt-6">
+    <h3 className="font-display text-xl font-bold uppercase text-ink">
+      {item.title}
+    </h3>
+
+    <p className="mt-3 text-sm leading-relaxed text-muted">
+      {item.body}
+    </p>
+  </li>
+</FadeIn>
             ))}
           </ul>
         </div>
       </section>
+      </FadeIn>
 
       {/* Leadership */}
+      <FadeIn>
       <section className="border-t border-border">
         <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-12">
@@ -156,23 +166,29 @@ export default function AboutPage() {
               </h2>
             </div>
             <div className="space-y-6 text-base leading-relaxed text-muted lg:col-span-8 lg:text-lg">
+              <FadeIn>
               <p>
                 I lead by creating conditions for excellence: clear goals,
                 empowered owners, and enough structure that creativity has room
                 to breathe. Placeholder copy on coaching, feedback, and building
                 trust across design, engineering, and go-to-market.
               </p>
+              </FadeIn>
+              <FadeIn delay={0.1}>
               <p>
                 I&apos;m direct but not harsh, ambitious but not reckless. Teams
                 I work with tend to describe the environment as calm, focused,
                 and unusually honest about tradeoffs.
               </p>
+              </FadeIn>
             </div>
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* Building products */}
+      <FadeIn>
       <section className="border-t border-border">
         <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-12">
@@ -189,25 +205,26 @@ export default function AboutPage() {
                   "Instrument early so debates end with data, not volume.",
                   "Align stakeholders before you need them in a war room.",
                 ].map((step, index) => (
-                  <li
-                    key={step}
-                    className="flex gap-6 border-t border-border pt-6"
-                  >
+                 <FadeIn key={step} delay={index * 0.1}>
+  <li className="flex gap-6 border-t border-border pt-6">
                     <span className="font-display text-2xl font-bold text-accent">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <p className="text-base leading-relaxed text-muted md:text-lg">
                       {step}
                     </p>
-                  </li>
+                 </li>
+</FadeIn>
                 ))}
               </ol>
             </div>
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* Experience */}
+      <FadeIn>
       <section className="border-t border-border bg-ink/[0.02]">
         <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24 lg:px-12">
           <SectionHeading
@@ -216,11 +233,12 @@ export default function AboutPage() {
             description="The roles and companies that I have worked for."
           />
           <ul className="mt-12 space-y-0">
-            {experience.map((item) => (
-              <li
-              key={`${item.company}-${item.period}`}
-                className="grid gap-4 border-t border-border py-8 md:grid-cols-12 md:gap-8"
-              >
+            {experience.map((item, index) => (
+              <FadeIn
+  key={`${item.company}-${item.period}`}
+ delay={index * 0.05}
+>
+  <li className="grid gap-4 border-t border-border py-8 md:grid-cols-12 md:gap-8">
                 <p className="text-xs font-medium uppercase tracking-wider text-muted md:col-span-3">
                   {item.period}
                 </p>
@@ -234,12 +252,15 @@ export default function AboutPage() {
                   </p>
                 </div>
               </li>
+</FadeIn>
             ))}
           </ul>
         </div>
       </section>
+      </FadeIn>
 
       {/* Industries */}
+      <FadeIn>
       <section className="border-t border-border">
         <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24 lg:px-12">
           <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-ink md:text-4xl">
@@ -257,8 +278,10 @@ export default function AboutPage() {
           </ul>
         </div>
       </section>
+      </FadeIn>
 
       {/* CTA */}
+      <FadeIn>
       <section className="border-t border-border">
         <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24 lg:px-12">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
@@ -288,6 +311,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
     </>
   );
 }
