@@ -12,13 +12,13 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-white">
+    <footer className="border-t border-border bg-white dark:bg-ink">
       <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="font-display text-2xl font-bold uppercase tracking-tight text-ink md:text-3xl">
-              Nafiu Gwandu
-            </p>
+            <p className="font-display text-xl font-bold uppercase text-ink dark:text-white">
+  Nafiu Gwandu
+</p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
               Product leader building systems, teams, and products with clarity
               and intent.
@@ -53,9 +53,9 @@ export function Footer() {
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Newsletter
             </p>
-            <p className="mt-2 font-display text-xl font-bold uppercase text-ink">
-              Stay in the loop
-            </p>
+           <p className="mt-2 font-display text-xl font-bold uppercase text-ink dark:text-white">
+  Stay in the loop
+</p>
             <p className="mt-2 text-sm text-muted">
               Thoughts on product, leadership, and building — delivered
               occasionally.

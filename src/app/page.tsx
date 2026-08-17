@@ -18,7 +18,7 @@ export default function HomePage() {
               Product Leader · Builder · Strategist
             </p>
            <FadeIn>
-            <h1 className="mt-6 font-display text-5xl font-bold uppercase leading-[0.92] tracking-tight text-ink text-balance sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="mt-6 font-display text-5xl font-bold uppercase leading-[0.92] tracking-tight text-ink dark:text-white text-balance sm:text-6xl md:text-7xl lg:text-8xl">
               I build products and teams that ship with clarity.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
@@ -35,12 +35,12 @@ export default function HomePage() {
   </Link>
 </AnimatedButton>
               <AnimatedButton>
-  <Link
-    href="/about"
-    className="text-sm font-medium uppercase tracking-wider text-ink transition-colors hover:text-accent"
-  >
-    About me →
-  </Link>
+ <Link
+  href="/about"
+  className="text-sm font-medium uppercase tracking-wider text-ink dark:text-white hover:!text-accent transition-colors"
+>
+  About me →
+</Link>
 </AnimatedButton>
 
             </div>
@@ -60,11 +60,11 @@ export default function HomePage() {
           </div>
           
           <div className="order-3 lg:col-span-4 lg:col-start-9">
-            <div className="border border-border p-6 md:p-8 lg:mt-8">
+            <div className="border border-border dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 md:p-8 lg:mt-8">
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
                 Newsletter
               </p>
-              <p className="mt-2 font-display text-xl font-bold uppercase text-ink">
+             <p className="mt-2 font-display text-xl font-bold uppercase text-ink dark:text-white">
                 Join the list
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -80,7 +80,7 @@ export default function HomePage() {
       {/* Case Studies */}
       <FadeIn>
       <section
-        className="border-t border-border bg-white"
+  className="border-t border-border dark:border-neutral-800 bg-white dark:bg-neutral-950"
         aria-labelledby="featured-heading"
       >
         <div className="mx-auto max-w-content px-6 py-20 md:px-10 md:py-28 lg:px-12">

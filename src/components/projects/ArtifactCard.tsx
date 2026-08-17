@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ArtifactCardProps = {
   image: string;
   alt: string;
@@ -15,11 +17,13 @@ export default function ArtifactCard({
 }: ArtifactCardProps) {
   return (
     <article className="overflow-hidden rounded-lg border border-border">
-      <img
-        src={image}
-        alt={alt}
-        className="w-full"
-      />
+      <Image
+  src={image}
+  alt={alt}
+  width={1200}
+  height={800}
+  className="w-full"
+/>
 
       <div className="p-8">
         <p className="text-xs uppercase tracking-[0.2em] text-accent">

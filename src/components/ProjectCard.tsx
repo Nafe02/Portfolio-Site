@@ -26,12 +26,14 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           {project.category}
         </span>
         {project.metric && (
-          <span className="text-right text-xs text-ink/70">{project.metric}</span>
+        <span className="text-right text-xs text-ink dark:text-neutral-300">
+  {project.metric}
+</span>
         )}
       </div>
 
       <h3
-        className={`font-display font-bold uppercase leading-none tracking-tight text-ink transition-colors group-hover:text-accent ${
+       className={`font-display font-bold uppercase leading-none tracking-tight text-ink dark:text-white transition-colors group-hover:text-accent ${
           featured ? "text-3xl md:text-4xl" : "text-2xl md:text-3xl"
         }`}
       >
@@ -48,19 +50,25 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             <dt className="text-xs uppercase tracking-wider text-muted">
               Challenge
             </dt>
-            <dd className="mt-1 text-ink">{project.challenge}</dd>
+            <dd className="mt-1 text-ink dark:text-white">
+  {project.challenge}
+</dd>
           </div>
           <div>
             <dt className="text-xs uppercase tracking-wider text-muted">
               Solution
             </dt>
-            <dd className="mt-1 text-ink">{project.solution}</dd>
+            <dd className="mt-1 text-ink dark:text-white">
+  {project.solution}
+</dd>
           </div>
           <div>
             <dt className="text-xs uppercase tracking-wider text-muted">
               Impact
             </dt>
-            <dd className="mt-1 font-medium text-ink">{project.impact}</dd>
+            <dd className="mt-1 font-medium text-ink dark:text-white">
+  {project.impact}
+</dd>
           </div>
         </dl>
       )}

@@ -8,11 +8,29 @@
   }
 
   body {
-    @apply bg-white font-sans text-ink antialiased;
-  }
+  @apply bg-white text-ink font-sans antialiased transition-colors duration-300;
+}
+
+html.dark body {
+  @apply bg-neutral-950 text-white;
+}
 
   ::selection {
     @apply bg-accent text-white;
+  }
+}
+
+@layer components {
+  .dark .text-muted {
+    @apply text-neutral-400;
+  }
+
+  .dark .text-ink {
+    @apply text-white;
+  }
+
+  .dark .border-border {
+    @apply border-neutral-800;
   }
 }
 

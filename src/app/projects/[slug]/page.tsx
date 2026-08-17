@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { allProjects } from "@/lib/data";
 import Link from "next/link";
 import ArtifactCard from "@/components/projects/ArtifactCard";
@@ -9,6 +10,36 @@ export function generateStaticParams() {
   return allProjects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  const project = allProjects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {};
+  }
+
+  const title = `${project.title} — Product Case Study | Nafiu Gwandu`;
+
+  return {
+    title,
+    description: project.summary,
+    alternates: {
+      canonical: `https://nafiugwandu.vercel.app/projects/${project.slug}`,
+    },
+    openGraph: {
+      title,
+      description: project.summary,
+      url: `https://nafiugwandu.vercel.app/projects/${project.slug}`,
+      type: "article",
+    },
+  };
 }
 
 export default async function ProjectPage({
@@ -234,28 +265,24 @@ const nextProject =
             Results
           </h2>
 
-          <div className="mt-10 grid gap-6 grid-cols-2 md:grid-cols-4">
+         {project.metrics && (
+  <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+    {project.metrics.map((item) => (
+      <div
+        key={item.label}
+        className="min-w-0 rounded-lg border p-5 md:p-8"
+      >
+        <p className="break-words text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
+          {item.value}
+        </p>
 
-          {project.metrics.map((item) => (
-
-              <div
-                key={item.label}
-                className="border rounded-lg p-8"
-              >
-
-                <p className="text-4xl font-bold">
-                  {item.value}
-                </p>
-
-                <p className="mt-3 text-sm uppercase tracking-wide text-muted">
-                  {item.label}
-                </p>
-
-              </div>
-
-            ))}
-
-          </div>
+        <p className="mt-2 break-words text-[10px] uppercase tracking-[0.12em] text-muted sm:text-xs md:mt-3 md:text-sm md:tracking-wide">
+          {item.label}
+        </p>
+      </div>
+    ))}
+  </div>
+)}
 
         </section>
   </FadeIn>
