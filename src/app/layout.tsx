@@ -5,7 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nafiugwandu.vercel.app"),
+  metadataBase: new URL("https://nafiu.vercel.app"),
 
   title: {
     default: "Nafiu Gwandu — Product Leader",
@@ -87,7 +87,7 @@ export default function RootLayout({
           {
             "@type": "Person",
             name: "Nafiu Gwandu",
-            url: "https://nafiugwandu.vercel.app",
+            url: "https://nafiu.vercel.app",
             jobTitle: "Product Leader",
             description:
               "Product Leader building products, teams, and systems with clarity, strategy, and intent.",
@@ -95,7 +95,7 @@ export default function RootLayout({
           {
             "@type": "WebSite",
             name: "Nafiu Gwandu",
-            url: "https://nafiugwandu.vercel.app",
+            url: "https://nafiu.vercel.app",
             description:
               "Portfolio of Nafiu Gwandu, a Product Leader focused on products, systems, execution, and team leadership.",
           },

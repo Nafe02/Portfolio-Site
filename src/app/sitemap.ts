@@ -4,7 +4,7 @@ import { allProjects } from "@/lib/data";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nafiugwandu.vercel.app";
+  const baseUrl = "https://nafiu.vercel.app";
 
   const staticPages: MetadataRoute.Sitemap = [
     {

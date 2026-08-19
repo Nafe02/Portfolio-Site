@@ -31,12 +31,12 @@ export async function generateMetadata({
     title,
     description: project.summary,
     alternates: {
-      canonical: `https://nafiugwandu.vercel.app/projects/${project.slug}`,
+      canonical: `https://nafiu.vercel.app/projects/${project.slug}`,
     },
     openGraph: {
       title,
       description: project.summary,
-      url: `https://nafiugwandu.vercel.app/projects/${project.slug}`,
+      url: `https://nafiu.vercel.app/projects/${project.slug}`,
       type: "article",
     },
   };
