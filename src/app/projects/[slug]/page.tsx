@@ -266,15 +266,15 @@ const nextProject =
           </h2>
 
          {project.metrics && (
-  <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+  <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
     {project.metrics.map((item) => (
       <div
         key={item.label}
         className="min-w-0 rounded-lg border p-5 md:p-8"
       >
-        <p className="break-words text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
-          {item.value}
-        </p>
+      <p className="break-normal text-2xl font-bold leading-tight sm:text-2xl lg:text-3xl 2xl:text-4xl">
+  {item.value}
+</p>
 
         <p className="mt-2 break-words text-[10px] uppercase tracking-[0.12em] text-muted sm:text-xs md:mt-3 md:text-sm md:tracking-wide">
           {item.label}

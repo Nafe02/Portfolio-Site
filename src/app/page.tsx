@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { NewsletterForm } from "@/components/NewsletterForm";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { featuredProjects } from "@/lib/data";
@@ -59,21 +58,7 @@ export default function HomePage() {
             </div>
           </div>
           
-          <div className="order-3 lg:col-span-4 lg:col-start-9">
-            <div className="border border-border dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 md:p-8 lg:mt-8">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-                Newsletter
-              </p>
-             <p className="mt-2 font-display text-xl font-bold uppercase text-ink dark:text-white">
-                Join the list
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                Occasional notes on product, leadership, and building — no
-                spam.
-              </p>
-              <NewsletterForm className="mt-6" />
-            </div>
-          </div>
+        
         </div>
       </section>
 
@@ -139,35 +124,6 @@ export default function HomePage() {
                 Read my story
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-      </FadeIn>
-
-      {/* Newsletter CTA */}
-      <FadeIn>
-      <section
-        className="bg-ink text-white"
-        aria-labelledby="newsletter-cta-heading"
-      >
-        <div className="mx-auto max-w-content px-6 py-20 md:px-10 md:py-28 lg:px-12">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/50">
-                Newsletter
-              </p>
-              <h2
-                id="newsletter-cta-heading"
-                className="mt-4 font-display text-4xl font-bold uppercase leading-[0.95] tracking-tight md:text-5xl lg:text-6xl"
-              >
-                Ideas worth your inbox.
-              </h2>
-              <p className="mt-6 max-w-md text-base leading-relaxed text-white/70">
-                Product strategy, leadership lessons, and honest takes on
-                building — subscribe for occasional, high-signal updates.
-              </p>
-            </div>
-            <NewsletterForm variant="cta" />
           </div>
         </div>
       </section>

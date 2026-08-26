@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/SectionHeading";
-import { NewsletterForm } from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "About",
@@ -300,15 +299,7 @@ export default function AboutPage() {
               View Case Studies
             </Link>
           </div>
-          <div className="mt-16 border-t border-border pt-12">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Newsletter
-            </p>
-            <p className="mt-2 font-display text-2xl font-bold uppercase text-ink">
-              Stay connected
-            </p>
-            <NewsletterForm className="mt-6 max-w-lg" />
-          </div>
+          
         </div>
       </section>
       </FadeIn>

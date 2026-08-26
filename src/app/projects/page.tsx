@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ProjectCard } from "@/components/ProjectCard";
-import { NewsletterForm } from "@/components/NewsletterForm";
 import { allProjects } from "@/lib/data";
 import { FadeIn } from "@/components/FadeIn";
 
@@ -42,20 +41,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-ink text-white">
-        <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-20 lg:px-12">
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/50">
-            Newsletter
-          </p>
-          <h2 className="mt-4 font-display text-3xl font-bold uppercase tracking-tight md:text-4xl">
-            Get updates on new work
-          </h2>
-          <p className="mt-4 max-w-md text-sm text-white/70">
-            Subscribe for occasional notes when new projects and essays go live.
-          </p>
-          <NewsletterForm variant="cta" className="mt-8 max-w-xl" />
-        </div>
-      </section>
+    
     </>
   );
 }

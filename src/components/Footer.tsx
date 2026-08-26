@@ -6,7 +6,6 @@ import {
 import { SiNotion } from "react-icons/si";
 import Link from "next/link";
 import { socialLinks } from "@/lib/data";
-import { NewsletterForm } from "./NewsletterForm";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -49,19 +48,7 @@ export function Footer() {
 </ul>
 </div>
 
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Newsletter
-            </p>
-           <p className="mt-2 font-display text-xl font-bold uppercase text-ink dark:text-white">
-  Stay in the loop
-</p>
-            <p className="mt-2 text-sm text-muted">
-              Thoughts on product, leadership, and building — delivered
-              occasionally.
-            </p>
-            <NewsletterForm variant="compact" className="mt-6" />
-          </div>
+          
         </div>
 
         <div className="mt-16 flex flex-col gap-2 border-t border-border pt-8 text-xs text-muted sm:flex-row sm:justify-between">
