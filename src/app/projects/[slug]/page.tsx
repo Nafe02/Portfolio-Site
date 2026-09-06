@@ -104,8 +104,21 @@ const nextProject =
           <p className="mt-2 font-semibold">{project.teamSize}</p>
         </div>
 
-      </div>
-      </FadeIn>
+           </div>
+
+      {project.website && (
+        <div className="mt-8">
+          <a
+            href={project.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center border border-border px-6 py-3 font-semibold transition hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+          >
+            Visit Website ↗
+          </a>
+        </div>
+      )}
+    </FadeIn>
 
       {/* Overview */}
 
@@ -434,11 +447,11 @@ const nextProject =
     </p>
 
     <Link
-      href={`/projects/${nextProject.slug}`}
-      className="mt-10 inline-block border px-8 py-4 font-semibold transition hover:bg-black hover:text-white"
-    >
-      View {nextProject.company} Case Study →
-    </Link>
+  href={`/projects/${nextProject.slug}`}
+  className="mt-10 inline-flex items-center border border-border px-6 py-3 font-semibold transition hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+>
+  View {nextProject.company} Case Study →
+</Link>
   </section>
 </FadeIn> 
 

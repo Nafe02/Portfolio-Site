@@ -3,6 +3,7 @@ export type Project = {
   title: string;
 
   company?: string;
+  website?: string;
   role?: string;
   duration?: string;
 
@@ -50,13 +51,15 @@ export type Project = {
 
 export const allProjects: Project[] = [
   {
-    slug: "ilim-tutor",
+   slug: "ilim-tutor",
 
-    title: "Leadership and Strategic Pivots in EdTech Development",
+title: "Leadership and Strategic Pivots in EdTech Development",
 
-    company: "Ilim Tutor",
+company: "Ilim Tutor",
 
-    role: "Product Manager",
+website: "http://www.ilimtutor.com/",
+
+role: "Product Manager",
 
     duration: "Mar 2024 – Mar 2025",
 
@@ -207,6 +210,8 @@ export const allProjects: Project[] = [
     title: "Scaling School Admissions Through User-Centered Product Management",
 
     company: "FlexiSAF",
+
+    website: "https://safapply.com/",
 
     role: "Associate Product Manager",
 
@@ -362,6 +367,8 @@ export const allProjects: Project[] = [
 
     company: "Microbiz",
 
+   website: "https://microbizmfb.com/",
+
     role: "Project Manager",
 
     duration: "Mar 2024 – Apr 2025",
@@ -515,6 +522,8 @@ export const allProjects: Project[] = [
 
     company: "NextCBA",
 
+   website: "https://www.nextcba.com/#/login",
+
     role: "Project Manager",
 
     duration: "March 2024 – July 2025",
@@ -641,6 +650,8 @@ export const allProjects: Project[] = [
       "Coordinating Blockchain and Backend Development for a Non-Custodial Crypto Platform",
 
     company: "Mufasa Labs",
+
+   website: "https://mufasax.com/en",
 
     role: "Project Manager",
 
@@ -771,6 +782,8 @@ export const allProjects: Project[] = [
     title: "Improving Travel Coordination for Destination Wedding Guests",
 
     company: "Albatross",
+
+    website: "https://albatross.live/",
 
     role: "Project Manager",
 

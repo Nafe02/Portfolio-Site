@@ -74,7 +74,9 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       )}
 
       {featured && project.impact && (
-        <p className="mt-6 text-sm font-medium text-ink">{project.impact}</p>
+        <p className="mt-6 text-sm font-medium text-ink dark:text-white">
+  {project.impact}
+</p>
       )}
 
 <Link
