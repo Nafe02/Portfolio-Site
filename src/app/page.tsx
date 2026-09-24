@@ -108,10 +108,7 @@ export default function HomePage() {
             </div>
             <div className="lg:col-span-7 lg:pl-8">
               <p className="text-lg leading-relaxed text-muted md:text-xl">
-                I care about the systems behind great products — how teams
-                align, how decisions get made, and how execution stays honest
-                when scale demands it. This is placeholder copy for a human,
-                reflective introduction.
+                I&apos;ve spent the last three years on products in edtech, fintech, crypto and travel, usually as the person responsible for delivery. What interests me is the system underneath: how a team decides what matters, and whether that decision survives contact with a real deadline.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-muted md:text-xl">
                 On the About page you&apos;ll find my story, philosophy, and how
