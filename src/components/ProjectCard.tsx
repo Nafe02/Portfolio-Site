@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import type { Project } from "@/lib/data";
@@ -21,6 +22,31 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
     featured ? "md:pt-10" : ""
   }`}
 >
+      <Link
+        href={`/projects/${project.slug}`}
+        tabIndex={-1}
+        aria-hidden
+        className="mb-6 block overflow-hidden rounded-lg border border-border bg-neutral-100 dark:bg-neutral-900"
+      >
+        <div className="relative aspect-[16/10] w-full">
+          {project.thumbnail ? (
+            <Image
+              src={project.thumbnail}
+              alt=""
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center bg-neutral-100 px-6 dark:bg-neutral-900">
+              <span className="text-center font-display text-xl font-bold uppercase leading-tight tracking-tight text-muted">
+                {project.company ?? project.title}
+              </span>
+            </div>
+          )}
+        </div>
+      </Link>
+
       <div className="mb-4 flex items-start justify-between gap-4">
         <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
           {project.category}

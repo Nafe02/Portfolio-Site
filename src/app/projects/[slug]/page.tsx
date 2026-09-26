@@ -114,7 +114,7 @@ const nextProject =
             rel="noopener noreferrer"
             className="inline-flex items-center border border-border px-6 py-3 font-semibold transition hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
           >
-            Visit Website ↗
+            {project.websiteLabel ?? "Visit Website"} ↗
           </a>
         </div>
       )}

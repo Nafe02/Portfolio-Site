@@ -4,6 +4,8 @@ export type Project = {
 
   company?: string;
   website?: string;
+  websiteLabel?: string;
+  thumbnail?: string;
   role?: string;
   duration?: string;
 
@@ -57,7 +59,11 @@ title: "Leadership and Strategic Pivots in EdTech Development",
 
 company: "Ilim Tutor",
 
-website: "http://www.ilimtutor.com/",
+// TODO: restore when ilimtutor.com is back online — the domain currently
+// does not resolve (NXDOMAIN), so the link rendered as a dead button.
+// website: "http://www.ilimtutor.com/",
+
+thumbnail: "/thumbnails/ilim-tutor.jpg",
 
 role: "Product Manager",
 
@@ -212,6 +218,7 @@ role: "Product Manager",
     company: "FlexiSAF",
 
     website: "https://safapply.com/",
+    thumbnail: "/thumbnails/flexisaf-safapply.jpg",
 
     role: "Associate Product Manager",
 
@@ -368,6 +375,7 @@ role: "Product Manager",
     company: "Microbiz",
 
    website: "https://microbizmfb.com/",
+   thumbnail: "/thumbnails/microbiz.jpg",
 
     role: "Project Manager",
 
@@ -523,6 +531,7 @@ role: "Product Manager",
     company: "NextCBA",
 
    website: "https://www.nextcba.com/#/login",
+   thumbnail: "/thumbnails/nextcba.jpg",
 
     role: "Project Manager",
 
@@ -652,6 +661,7 @@ role: "Product Manager",
     company: "Mufasa Labs",
 
    website: "https://mufasax.com/en",
+   thumbnail: "/thumbnails/mufasa-labs.jpg",
 
     role: "Project Manager",
 
@@ -784,6 +794,7 @@ role: "Product Manager",
     company: "Albatross",
 
     website: "https://albatross.live/",
+    thumbnail: "/thumbnails/albatross.jpg",
 
     role: "Project Manager",
 
