@@ -59,9 +59,11 @@ title: "Leadership and Strategic Pivots in EdTech Development",
 
 company: "Ilim Tutor",
 
-// TODO: restore when ilimtutor.com is back online — the domain currently
-// does not resolve (NXDOMAIN), so the link rendered as a dead button.
-// website: "http://www.ilimtutor.com/",
+website: "https://www.linkedin.com/company/ilim-tutor",
+websiteLabel: "View Company Profile",
+// TODO: when ilimtutor.com is back online, switch website back to
+// "http://www.ilimtutor.com/" and delete websiteLabel so the button
+// reverts to the default "Visit Website".
 
 thumbnail: "/thumbnails/ilim-tutor.jpg",
 
