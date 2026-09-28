@@ -28,7 +28,7 @@ export default function ProjectsPage() {
 
       <section className="border-t border-border">
         <div className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24 lg:px-12">
-          <div className="grid gap-16 md:grid-cols-2 lg:gap-20">
+          <div className="grid gap-16 md:gap-20">
            {allProjects.map((project, index) => (
   <FadeIn
     key={project.slug}

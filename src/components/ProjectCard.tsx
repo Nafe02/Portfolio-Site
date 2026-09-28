@@ -18,7 +18,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
     duration: 0.2,
     ease: "easeOut",
   }}
-  className={`group flex flex-col border-t border-border pt-8 transition-colors ${
+  className={`group grid gap-6 border-t border-border pt-8 transition-colors lg:grid-cols-12 lg:gap-10 ${
     featured ? "md:pt-10" : ""
   }`}
 >
@@ -26,7 +26,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         href={`/projects/${project.slug}`}
         tabIndex={-1}
         aria-hidden
-        className="mb-6 block overflow-hidden rounded-lg border border-border bg-neutral-100 dark:bg-neutral-900"
+        className="block self-start overflow-hidden rounded-lg border border-border bg-neutral-100 dark:bg-neutral-900 lg:col-span-5"
       >
         <div className="relative aspect-[16/10] w-full">
           {project.thumbnail ? (
@@ -34,7 +34,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
               src={project.thumbnail}
               alt=""
               fill
-              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+              sizes="(min-width: 1024px) 42vw, 100vw"
               className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
             />
           ) : (
@@ -47,6 +47,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         </div>
       </Link>
 
+      <div className="flex flex-col lg:col-span-7">
       <div className="mb-4 flex items-start justify-between gap-4">
         <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
           {project.category}
@@ -118,6 +119,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   →
 </motion.span>
 </Link>
+      </div>
    </motion.article>
   );
 }

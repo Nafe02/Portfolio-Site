@@ -76,7 +76,7 @@ export default function HomePage() {
            
            description="Real product work across EdTech, education operations, and fintech."
           />
-          <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8 lg:gap-12">
+          <div className="mt-16 grid gap-16 md:gap-20">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.slug} project={project} featured />
             ))}
