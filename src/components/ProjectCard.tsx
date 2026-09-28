@@ -26,7 +26,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         href={`/projects/${project.slug}`}
         tabIndex={-1}
         aria-hidden
-        className="block self-start overflow-hidden rounded-lg border border-border bg-neutral-100 dark:bg-neutral-900 lg:col-span-5"
+        className="block self-start overflow-hidden rounded-lg border border-border bg-neutral-100 dark:bg-neutral-900 lg:col-span-6"
       >
         <div className="relative aspect-[16/10] w-full">
           {project.thumbnail ? (
@@ -47,7 +47,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         </div>
       </Link>
 
-      <div className="flex flex-col lg:col-span-7">
+      <div className="flex flex-col lg:col-span-6">
       <div className="mb-4 flex items-start justify-between gap-4">
         <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
           {project.category}
