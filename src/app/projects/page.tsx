@@ -34,7 +34,7 @@ export default function ProjectsPage() {
     key={project.slug}
     delay={index * 0.08}
   >
-    <ProjectCard project={project} />
+    <ProjectCard project={project} layout="stacked" />
   </FadeIn>
 ))}
           </div>

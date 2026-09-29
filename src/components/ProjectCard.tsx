@@ -8,9 +8,17 @@ import type { Project } from "@/lib/data";
 type ProjectCardProps = {
   project: Project;
   featured?: boolean;
+  /** "row" puts the thumbnail beside the text on large screens; "stacked" keeps it on top. */
+  layout?: "row" | "stacked";
 };
 
-export function ProjectCard({ project, featured = false }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  featured = false,
+  layout = "row",
+}: ProjectCardProps) {
+  const row = layout === "row";
+
   return (
    <motion.article
   whileHover={{ y: -4 }}
@@ -18,15 +26,17 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
     duration: 0.2,
     ease: "easeOut",
   }}
-  className={`group grid gap-6 border-t border-border pt-8 transition-colors lg:grid-cols-12 lg:gap-10 ${
-    featured ? "md:pt-10" : ""
-  }`}
+  className={`group grid gap-6 border-t border-border pt-8 transition-colors ${
+    row ? "lg:grid-cols-12 lg:gap-10" : ""
+  } ${featured ? "md:pt-10" : ""}`}
 >
       <Link
         href={`/projects/${project.slug}`}
         tabIndex={-1}
         aria-hidden
-        className="block self-start overflow-hidden rounded-lg border border-border bg-neutral-100 dark:bg-neutral-900 lg:col-span-7"
+        className={`block self-start overflow-hidden rounded-lg border border-border bg-neutral-100 dark:bg-neutral-900 ${
+          row ? "lg:col-span-7" : ""
+        }`}
       >
         <div className="relative aspect-[16/10] w-full">
           {project.thumbnail ? (
@@ -34,7 +44,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
               src={project.thumbnail}
               alt=""
               fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              sizes={row ? "(min-width: 1024px) 50vw, 100vw" : "100vw"}
               className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
             />
           ) : (
@@ -47,7 +57,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         </div>
       </Link>
 
-      <div className="flex flex-col lg:col-span-5">
+      <div className={`flex flex-col ${row ? "lg:col-span-5" : ""}`}>
       <div className="mb-4 flex items-start justify-between gap-4">
         <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
           {project.category}
